@@ -189,7 +189,7 @@ const inspecteursLayer = L.geoJson(arrondissements, {
   style: styleInspecteurs,
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
-            <p style='margin:0; padding:0;'><strong>Code : </strong>${feature.properties.name}</p>
+            <p style='margin:0; padding:0;'><strong>Arrond. : </strong>${feature.properties.name}</p>
             <p style='margin:0; padding:0;'><strong>Secteur : </strong>${feature.properties.Secteur}</p>
             <p style='margin:0; padding:0'><strong>Inspecteur :</strong> ${feature.properties.Inspecteur}</p>
             <p style='margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Email}</p>
