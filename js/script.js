@@ -1,15 +1,18 @@
-const map = L.mapbox.map("mapDIV");
-
+var map = L.mapbox
+  .map("mapDIV", null, { zoomControl: false })
+  .setView([45.55, -73.66], 11);
+const zoomHome = L.Control.zoomHome().addTo(map);
+// L.control.locate().addTo(map);
 L.mapbox.accessToken =
   "pk.eyJ1IjoibWJhcmVjaGUiLCJhIjoiY2pkbHpqZjQ3MGVibzJycWhka203dDNtYiJ9.GLpfZW2gcYULhuIa6vwgFw";
 
 // L.mapbox.accessToken =
 //   "pk.eyJ1IjoiYWJlbmZhdHRvdW0iLCJhIjoiY2ozY3l6MWV5MDAwZjMybnc0NmdhNDBpeSJ9.oYZEToeffGVafaQRotTLVg";
 
-const Streets = L.mapbox
-  .styleLayer("mapbox://styles/mapbox/streets-v11")
+const Light = L.mapbox
+  .styleLayer("mapbox://styles/mapbox/light-v10")
   .addTo(map);
-const Light = L.mapbox.styleLayer("mapbox://styles/mapbox/light-v10");
+const Streets = L.mapbox.styleLayer("mapbox://styles/mapbox/streets-v11");
 const Outdoors = L.mapbox.styleLayer("mapbox://styles/mapbox/outdoors-v11");
 const Satellite = L.mapbox.styleLayer("mapbox://styles/mapbox/satellite-v9");
 
@@ -366,8 +369,8 @@ map.on("move", function () {
 
 //  Control Groups et overlays
 const baseMaps = {
-  Streets: Streets,
   Light: Light,
+  Streets: Streets,
   Outdoors: Outdoors,
   Satellite: Satellite,
   ISRI: esriTile,
@@ -398,7 +401,58 @@ map.addControl(
 );
 
 // Google Street View
-L.streetView({ position: "topleft" }).addTo(map);
+L.streetView({ position: "topright" }).addTo(map);
+
+// Draw Tools
+const drawnItems = new L.FeatureGroup();
+map.addLayer(drawnItems);
+
+const drawControl = new L.Control.Draw({
+  // position: "topright",
+  draw: {
+    polygon: {
+      shapeOptions: {
+        color: "purple",
+      },
+      allowIntersection: false,
+      drawError: {
+        color: "orange",
+        timeout: 1000,
+      },
+      showArea: true,
+      metric: true,
+      repeatMode: true,
+    },
+    polyline: {
+      shapeOptions: {
+        color: "red",
+      },
+      showArea: true,
+      metric: true,
+      repeatMode: true,
+    },
+    rectangle: {
+      shapeOptions: {
+        color: "green",
+      },
+      showArea: true,
+      metric: true,
+      repeatMode: true,
+    },
+    circlemarker: false,
+    marker: false,
+    circle: false,
+  },
+  edit: {
+    featureGroup: drawnItems,
+  },
+});
+map.addControl(drawControl);
+
+map.on("draw:created", function (e) {
+  layer = e.layer;
+  drawnItems.addLayer(layer);
+});
 
 // add searchControl to the map
 searchControl.addTo(map);
@@ -420,3 +474,4 @@ searchControl.addTo(map);
 //     // map.fitBounds(poly.getBounds());
 //   })
 //   .addTo(map);
+L.control.scale({ position: "bottomright" }).addTo(map);
