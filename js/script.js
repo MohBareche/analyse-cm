@@ -159,28 +159,28 @@ const arrondissementsLayer = L.geoJson(arrondissements, {
 //   Inspecteurs
 function getColorInspecteurs(feature) {
   switch (feature) {
-    case "Salah Eddine Djouadou":
-      return "black";
-    case "Rachid Fatah":
+    case "A":
       return "#704709";
-    case "Patrice Robin":
-      return "#8cc720";
-    case "Alexandre Niquet":
+    case "B":
       return "red";
-    case "Lana-Lee Poirier":
+    case "C":
       return "#940043";
-    case "Marc-Antoine Ciociola":
-      return "#d4d93d";
-    case "Stéphanie Chin":
-      return "#147ec9";
-    case "Timothy Fisher":
+    case "D":
       return "#9004e0";
+    case "E":
+      return "#d4d93d";
+    case "F":
+      return "#147ec9";
+    case "G":
+      return "black";
+    case "H":
+      return "#8cc720";
   }
 }
 function styleInspecteurs(feature) {
   return {
-    color: getColorInspecteurs(feature.properties.Inspecteur),
-    fillColor: getColorInspecteurs(feature.properties.Inspecteur),
+    color: getColorInspecteurs(feature.properties.Secteur),
+    fillColor: getColorInspecteurs(feature.properties.Secteur),
     opacity: 1,
     fillOpacity: 0.4,
   };
@@ -190,6 +190,7 @@ const inspecteursLayer = L.geoJson(arrondissements, {
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
             <p style='margin:0; padding:0;'><strong>Code : </strong>${feature.properties.name}</p>
+            <p style='margin:0; padding:0;'><strong>Secteur : </strong>${feature.properties.Secteur}</p>
             <p style='margin:0; padding:0'><strong>Inspecteur :</strong> ${feature.properties.Inspecteur}</p>
             <p style='margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Email}</p>
             <p style='margin:0; padding:0'><strong>Téléphone :</strong> ${feature.properties.Téléph}</p>
@@ -209,7 +210,72 @@ const inspecteursLayer = L.geoJson(arrondissements, {
   },
 });
 
-// Secteurs AGIR
+//   Horticulteurs
+function getColorHorticulteurs(feature) {
+  switch (feature) {
+    case "A":
+      return "#704709";
+    case "B":
+      return "red";
+    case "C":
+      return "#940043";
+    case "D":
+      return "#9004e0";
+    case "E":
+      return "#d4d93d";
+    case "F":
+      return "#147ec9";
+    case "G":
+      return "black";
+    case "H":
+      return "#8cc720";
+  }
+}
+function styleHorticulteurs(feature) {
+  return {
+    color: getColorHorticulteurs(feature.properties.Secteur),
+    fillColor: getColorHorticulteurs(feature.properties.Secteur),
+    opacity: 1,
+    fillOpacity: 0.4,
+  };
+}
+const horticulteursLayer = L.geoJson(arrondissements, {
+  style: styleHorticulteurs,
+  onEachFeature: function (feature, layer) {
+    if (feature.properties.Horticulteur2 !== "") {
+      layer.bindPopup(`
+            <p style='margin:0; padding:0;'><strong>Arrond. : </strong>${feature.properties.name}</p>
+            <p style='margin:0; padding:0'><strong>Horticulteur 1 :</strong> ${feature.properties.Horticulteur1}</p>
+            <p style='margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Courriel1}</p>
+            <p style='margin:0; padding:0'><strong>Téléphone :</strong> ${feature.properties.Téléphone1}</p>
+            <p style='margin:0; padding:0'><strong>Horticulteur 2 :</strong> ${feature.properties.Horticulteur2}</p>
+            <p style='margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Courriel2}</p>
+            <p style='margin:0; padding:0'><strong>Téléphone :</strong> ${feature.properties.Téléphone2}</p>
+            `);
+    } else {
+      layer.bindPopup(`
+            <p style='margin:0; padding:0;'><strong>Arrond. : </strong>${feature.properties.name}</p>
+            <p style='margin:0; padding:0'><strong>Horticulteur :</strong> ${feature.properties.Horticulteur1}</p>
+            <p style='margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Courriel1}</p>
+            <p style='margin:0; padding:0'><strong>Téléphone :</strong> ${feature.properties.Téléphone1}</p>
+      `);
+    }
+    layer.on("mouseover", function () {
+      this.setStyle({
+        fillOpacity: 0.2,
+        opacity: 1,
+      });
+    });
+    layer.on("mouseout", function () {
+      this.setStyle({
+        fillOpacity: 0.4,
+        opacity: 1,
+      });
+    });
+  },
+});
+
+//    Secteurs AGIR
 function getColorSecteurs(feature) {
   switch (feature) {
     case 1:
@@ -255,7 +321,7 @@ const secteursAgirLayer = L.geoJson(secteurs_agir, {
   },
 });
 
-//   Casernes
+//    Casernes
 const markers = L.markerClusterGroup();
 const geoJsonLayer = L.geoJson(casernes, {
   onEachFeature: function (feature, layer) {
@@ -316,6 +382,7 @@ const overlayMaps = {
   Casernes: casernesMarkers,
   "Secteurs AGIR": secteursAgirLayer,
   Inspecteurs: inspecteursLayer,
+  Horticulteurs: horticulteursLayer,
   "Google Street View": markerGSV,
 };
 
