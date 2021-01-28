@@ -412,7 +412,7 @@ const drawControl = new L.Control.Draw({
   draw: {
     polygon: {
       shapeOptions: {
-        color: "purple",
+        color: "#490066",
       },
       allowIntersection: false,
       drawError: {
@@ -425,7 +425,7 @@ const drawControl = new L.Control.Draw({
     },
     polyline: {
       shapeOptions: {
-        color: "darkgreen",
+        color: "#490066",
       },
       showArea: true,
       metric: true,
@@ -433,7 +433,7 @@ const drawControl = new L.Control.Draw({
     },
     rectangle: {
       shapeOptions: {
-        color: "indigo",
+        color: "#490066",
       },
       showArea: true,
       metric: true,
