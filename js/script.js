@@ -1,6 +1,6 @@
 var map = L.mapbox
   .map("mapDIV", null, { zoomControl: false })
-  .setView([45.55, -73.66], 11);
+  .setView([45.55, -73.66], 10);
 const zoomHome = L.Control.zoomHome().addTo(map);
 // L.control.locate().addTo(map);
 L.mapbox.accessToken =
@@ -417,7 +417,7 @@ const drawControl = new L.Control.Draw({
       allowIntersection: false,
       drawError: {
         color: "orange",
-        timeout: 1000,
+        timeout: 2000,
       },
       showArea: true,
       metric: true,
@@ -425,7 +425,7 @@ const drawControl = new L.Control.Draw({
     },
     polyline: {
       shapeOptions: {
-        color: "red",
+        color: "darkgreen",
       },
       showArea: true,
       metric: true,
@@ -433,7 +433,7 @@ const drawControl = new L.Control.Draw({
     },
     rectangle: {
       shapeOptions: {
-        color: "green",
+        color: "indigo",
       },
       showArea: true,
       metric: true,
@@ -456,6 +456,10 @@ map.on("draw:created", function (e) {
 
 // add searchControl to the map
 searchControl.addTo(map);
+
+// Échelle à droite en bas
+L.control.scale({ position: "bottomright" }).addTo(map);
+
 // L.Control.geocoder({
 //   // collapsed: false,
 //   position: "topleft",
@@ -474,4 +478,3 @@ searchControl.addTo(map);
 //     // map.fitBounds(poly.getBounds());
 //   })
 //   .addTo(map);
-L.control.scale({ position: "bottomright" }).addTo(map);
