@@ -1,4 +1,4 @@
-var map = L.mapbox
+const map = L.mapbox
   .map("mapDIV", null, { zoomControl: false })
   .setView([45.55, -73.66], 10);
 const zoomHome = L.Control.zoomHome().addTo(map);
@@ -103,7 +103,12 @@ const axeSensibleLayer = L.geoJson(axe_sensible2021, {
 //   Patrimoine
 const patrimoineLayer = L.geoJson(patrimoine, {
   onEachFeature: function (feature, layer) {
-    layer.setStyle({ fillColor: "magenta", color: "magenta", opacity: 0.5 });
+    layer.setStyle({
+      fillColor: "magenta",
+      color: "magenta",
+      opacity: 1,
+      fillOpacity: 0.5,
+    });
     layer.bindPopup(`
             <p style='margin:0; padding:0;'><strong>Patrimoine</strong></p>
             `);
@@ -111,7 +116,8 @@ const patrimoineLayer = L.geoJson(patrimoine, {
       this.setStyle({
         color: "red",
         fillColor: "red",
-        opacity: 0.8,
+        opacity: 1,
+        fillOpacity: 0.8,
       });
       this.openPopup();
     });
@@ -119,7 +125,8 @@ const patrimoineLayer = L.geoJson(patrimoine, {
       this.setStyle({
         color: "magenta",
         fillColor: "magenta",
-        opacity: 0.5,
+        opacity: 1,
+        fillOpacity: 0.5,
       });
       this.closePopup();
     });
@@ -127,32 +134,73 @@ const patrimoineLayer = L.geoJson(patrimoine, {
 });
 
 //   Arrondissements
+function getColorArrondissements(feature) {
+  switch (feature) {
+    case "AHU":
+      return "#33658a";
+    case "ANJ":
+      return "#f6ae2d";
+    case "CDN":
+      return "#488b49";
+    case "IBI":
+      return "#639a88";
+    case "LAC":
+      return "#F71E37";
+    case "LAS":
+      return "#087E8B";
+    case "LSO":
+      return "#8b635c";
+    case "MHM":
+      return "#60594d";
+    case "MTN":
+      return "#6c4b5e";
+    case "OUT":
+      return "#040663";
+    case "PLA":
+      return "#C799A6";
+    case "PRF":
+      return "#2E294E";
+    case "RDP":
+      return "#C17767";
+    case "RPP":
+      return "#17C3B2";
+    case "STL":
+      return "#296EB4";
+    case "VER":
+      return "#754668";
+    case "VIM":
+      return "#587D71";
+    case "VSE":
+      return "#E15A97";
+    case "VSL":
+      return "#861388";
+  }
+}
+function styleArrondissements(feature) {
+  return {
+    color: getColorArrondissements(feature.properties.name),
+    fillColor: getColorArrondissements(feature.properties.name),
+    opacity: 1,
+    fillOpacity: 0.7,
+  };
+}
 const arrondissementsLayer = L.geoJson(arrondissements, {
+  style: styleArrondissements,
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
             <p style='margin:0; padding:0;'><strong>Code: </strong>${feature.properties.name}</p>
             <p style='margin:0; padding:0'><strong>Description:</strong> ${feature.properties.description}</p>
             `);
 
-    layer.setStyle({
-      fillColor: "#7d0180",
-      fillOpacity: 0.3,
-      color: "#7d0180",
-      opacity: 1,
-    });
     layer.on("mouseover", function () {
       this.setStyle({
-        fillColor: "green",
         fillOpacity: 0.3,
-        color: "green",
         opacity: 1,
       });
     });
     layer.on("mouseout", function () {
       this.setStyle({
-        fillColor: "#7d0180",
-        fillOpacity: 0.3,
-        color: "#7d0180",
+        fillOpacity: 0.7,
         opacity: 1,
       });
     });
@@ -171,7 +219,7 @@ function getColorInspecteurs(feature) {
     case "D":
       return "#9004e0";
     case "E":
-      return "#d4d93d";
+      return "#0B7A75";
     case "F":
       return "#147ec9";
     case "G":
@@ -225,7 +273,7 @@ function getColorHorticulteurs(feature) {
     case "D":
       return "#9004e0";
     case "E":
-      return "#d4d93d";
+      return "#0B7A75";
     case "F":
       return "#147ec9";
     case "G":
@@ -312,7 +360,7 @@ const secteursAgirLayer = L.geoJson(secteurs_agir, {
     layer.on("mouseover", function () {
       this.setStyle({
         opacity: 1,
-        fillOpacity: 0.4,
+        fillOpacity: 0.3,
       });
     });
     layer.on("mouseout", function () {
