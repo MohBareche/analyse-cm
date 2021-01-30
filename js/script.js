@@ -107,7 +107,7 @@ const patrimoineLayer = L.geoJson(patrimoine, {
       fillColor: "magenta",
       color: "magenta",
       opacity: 1,
-      fillOpacity: 0.5,
+      fillOpacity: 0.2,
     });
     layer.bindPopup(`
             <p style='margin:0; padding:0;'><strong>Patrimoine</strong></p>
@@ -117,7 +117,7 @@ const patrimoineLayer = L.geoJson(patrimoine, {
         color: "red",
         fillColor: "red",
         opacity: 1,
-        fillOpacity: 0.8,
+        fillOpacity: 0.2,
       });
       this.openPopup();
     });
@@ -126,7 +126,7 @@ const patrimoineLayer = L.geoJson(patrimoine, {
         color: "magenta",
         fillColor: "magenta",
         opacity: 1,
-        fillOpacity: 0.5,
+        fillOpacity: 0.2,
       });
       this.closePopup();
     });
