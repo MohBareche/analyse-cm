@@ -426,8 +426,8 @@ const baseMaps = {
 };
 const overlayMaps = {
   Arrondissement: arrondissementsLayer,
-  "Axes de mobilité": axeMobLayer,
-  "Axes sensibles": axeSensibleLayer,
+  "Axes de mobilité sans trav.": axeMobLayer,
+  "Axes sensibles avec trav.": axeSensibleLayer,
   Patrimoine: patrimoineLayer,
   "Ruelles vertes": ruellesVertesLayer,
   Casernes: casernesMarkers,
