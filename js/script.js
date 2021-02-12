@@ -25,15 +25,15 @@ const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 const esriTile = L.esri.basemapLayer("Streets");
 
 // create the geocoding control and add it to the map
-const searchControl = L.esri.Geocoding.geosearch({
-  providers: [
-    L.esri.Geocoding.arcgisOnlineProvider({
-      // API Key to be passed to the ArcGIS Online Geocoding Service
-      apikey:
-        "LPZI_RPSn5QOwul999v_YVinHGRcnhPhKoANjt-c4iQY51JqeKingfBg2gQWcbSQwp0oiO0xXR8z-qKvudiD8bTqcdUjxEj4mLHZKBavH0hs6sCw3DgeVGSyStkKqw89dfS51TihBWLex2mtVulwQ01thCWV_dAzhBZMR14rW8g4TBmiLdva61ychvVcfzUneCcNC5frVB4zCZUxRGbeNHF61KZ1vC73M5gl6eIF9lc.",
-    }),
-  ],
-});
+// const searchControl = L.esri.Geocoding.geosearch({
+//   providers: [
+//     L.esri.Geocoding.arcgisOnlineProvider({
+//       // API Key to be passed to the ArcGIS Online Geocoding Service
+//       apikey:
+//         "LPZI_RPSn5QOwul999v_YVinHGRcnhPhKoANjt-c4iQY51JqeKingfBg2gQWcbSQwp0oiO0xXR8z-qKvudiD8bTqcdUjxEj4mLHZKBavH0hs6sCw3DgeVGSyStkKqw89dfS51TihBWLex2mtVulwQ01thCWV_dAzhBZMR14rW8g4TBmiLdva61ychvVcfzUneCcNC5frVB4zCZUxRGbeNHF61KZ1vC73M5gl6eIF9lc.",
+//     }),
+//   ],
+// });
 
 // create an empty layer group to store the results and add it to the map
 const results = L.layerGroup().addTo(map);
@@ -43,13 +43,6 @@ const travIcon = L.icon({
   iconUrl: "../img/trav.png",
   iconSize: [40, 40],
   iconAnchor: [20, 20],
-});
-
-searchControl.on("results", function (data) {
-  results.clearLayers();
-  for (let i = data.results.length - 1; i >= 0; i--) {
-    results.addLayer(L.marker(data.results[i].latlng, { icon: travIcon }));
-  }
 });
 
 //   Ruelles vertes
@@ -503,27 +496,38 @@ map.on("draw:created", function (e) {
   drawnItems.addLayer(layer);
 });
 
-// add searchControl to the map
-searchControl.addTo(map);
+// const geocoder = L.Control.geocoder({
+//   geocoder: new L.Control.Geocoder.Nominatim({
+//     geocodingQueryParams: {
+//       country: "CA",
+//       city: "Montreal",
+//     },
+//   }),
+//   defaultMarkGeocode: false,
+//   position: "topleft",
+//   collapsed: true,
+//   placeholder: "Entrez votre adress...",
+// })
+//   .on("markgeocode", function (e) {
+//     let center = e.geocode.center;
+//     L.marker(center, { icon: travIcon }).addTo(map);
+//     map.flyTo(center, 17);
+//   })
+//   .addTo(map);
+let arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider({ countries: "CA" });
+const searchControl = L.esri.Geocoding.geosearch({
+  collapseAfterResult: false,
+  placeholder: "Rechercher des lieux ou des adresses...",
+  title: "Recherche d'emplacement",
+  providers: [arcgisOnline],
+}).addTo(map);
+
+searchControl.on("results", function (data) {
+  results.clearLayers();
+  for (let i = data.results.length - 1; i >= 0; i--) {
+    results.addLayer(L.marker(data.results[i].latlng, { icon: travIcon }));
+  }
+});
 
 // Échelle à droite en bas
 L.control.scale({ position: "bottomright" }).addTo(map);
-
-// L.Control.geocoder({
-//   // collapsed: false,
-//   position: "topleft",
-//   geocoder: L.Control.Geocoder.Photon({
-
-//   }),
-// })
-//   .on("markgeocode", function (e) {
-//     // var bbox = e.geocode.bbox;
-//     // var poly = L.polygon([
-//     //   bbox.getSouthEast(),
-//     //   bbox.getNorthEast(),
-//     //   bbox.getNorthWest(),
-//     //   bbox.getSouthWest(),
-//     // ]).addTo(map);
-//     // map.fitBounds(poly.getBounds());
-//   })
-//   .addTo(map);
