@@ -516,7 +516,7 @@ map.on("draw:created", function (e) {
 //   .addTo(map);
 let arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider({ countries: "CA" });
 const searchControl = L.esri.Geocoding.geosearch({
-  collapseAfterResult: false,
+  // collapseAfterResult: false,
   placeholder: "Rechercher des lieux ou des adresses...",
   title: "Recherche d'emplacement",
   providers: [arcgisOnline],
