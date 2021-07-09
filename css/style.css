@@ -11,7 +11,7 @@ body {
 
 #description {
   position: fixed;
-  bottom: 0;
+  bottom: 10px;
   left: 10px;
   width: auto;
   margin-bottom: 30px;
