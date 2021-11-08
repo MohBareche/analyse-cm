@@ -482,7 +482,7 @@ const drawControl = new L.Control.Draw({
       repeatMode: true,
     },
     circlemarker: false,
-    marker: false,
+    marker: true,
     circle: false,
   },
   edit: {
