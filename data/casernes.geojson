@@ -338,7 +338,8 @@ let casernes = {
         "DATE_DEBUT": "2015-01-01T07:00:00",
         "DATE_FIN": "NaT",
         "MTM8_X": 295324.0,
-        "MTM8_Y": 5052975.0
+        "MTM8_Y": 5052975.0,
+        "id":18
       },
       "geometry": {
         "type": "Point",
