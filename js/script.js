@@ -388,9 +388,9 @@ const geoJsonLayer = L.geoJson(casernes, {
     layer.on("mouseover", function () {
       this.openPopup();
     });
-    layer.on("mouseout", function () {
-      this.closePopup();
-    });
+//     layer.on("mouseout", function () {
+//       this.closePopup();
+//     });
   },
 });
 const casernesMarkers = markers.addLayer(geoJsonLayer);
