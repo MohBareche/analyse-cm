@@ -46,7 +46,7 @@ const travIcon = L.icon({
 });
 
 const dosDaneIcon1104 = L.icon({
-  iconUrl:"../img/speed-bump-1104.svg",
+  iconUrl:"../img/speed_hump_1104.svg",
   iconSize: [40, 40],
   iconAnchor: [20, 20],
 });
