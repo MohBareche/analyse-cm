@@ -47,7 +47,7 @@ const travIcon = L.icon({
 
 
 //   C1104
-const C1104 = L.geoJson(C1104, {
+const C1104_Layer = L.geoJson(C1104, {
   onEachFeature: function (feature, layer) {
     layer.setStyle({ color: "blue" });
     layer.bindPopup(`
@@ -446,7 +446,7 @@ const baseMaps = {
 const overlayMaps = {
 //   "Contrat 1093":C1093,
 //   "Contrat 1096":C1096,
-  "Contrat 1104":C1104,
+  "Contrat 1104":C1104_Layer,
 //   "Contrat 1105":C1105,
 //   "Contrat 1106":C1106,
 //   "Contrat 1108":C1108,
