@@ -46,15 +46,15 @@ const travIcon = L.icon({
 });
 
 const dosDaneIcon1104 = L.icon({
-  iconUrl:"../img/speed_hump_1104.svg",
-  iconSize: [40, 40],
-  iconAnchor: [20, 20],
+  iconUrl:"../img/speed_bump_1104.svg",
+  iconSize: [30, 30],
+  iconAnchor: [15, 15],
 });
 
 const dosDaneIcon1105 = L.icon({
-  iconUrl: "../img/speed-bump-1105.svg",
-  iconSize: [40, 40],
-  iconAnchor: [20, 20],
+  iconUrl: "../img/speed_bump_1105.svg",
+  iconSize: [30, 30],
+  iconAnchor: [15, 15],
 });
 
 //   C1104
