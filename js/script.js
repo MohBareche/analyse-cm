@@ -46,16 +46,16 @@ const travIcon = L.icon({
 });
 
 const dosDaneIcon1104 = L.icon({
-  iconUrl:"../img/speed-bump.svg",
+  iconUrl:"../img/speed-bump-1104.svg",
   iconSize: [40, 40],
   iconAnchor: [20, 20],
 });
 
-// const dosDaneIcon1105 = L.icon({
-//   iconUrl: "../img/speed-bump.svg",
-//   iconSize: [40, 40],
-//   iconAnchor: [20, 20],
-// });
+const dosDaneIcon1105 = L.icon({
+  iconUrl: "../img/speed-bump-1105.svg",
+  iconSize: [40, 40],
+  iconAnchor: [20, 20],
+});
 
 //   C1104
 const C1104_Layer = L.geoJson(C1104, {
@@ -78,7 +78,7 @@ const C1104_Layer = L.geoJson(C1104, {
 //   C1105
 const C1105_Layer = L.geoJson(C1105, {
   pointToLayer: function (feature, latlng) {
-            return L.marker(latlng, {icon: dosDaneIcon1104});
+            return L.marker(latlng, {icon: dosDaneIcon1105});
   },
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
