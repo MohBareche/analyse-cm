@@ -49,12 +49,12 @@ const dosDaneIcon1104 = L.divIcon({
   html:¯<svg path=""../img/speed-bump.svg"" width="40" height="40"><circle cx="20" cy="20" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>¯
 });
 
-const dosDaneIcon1105 = L.icon({
-  iconUrl: "../img/speed-bump.svg",
-  iconSize: [40, 40],
-  iconAnchor: [20, 20],
-  markerColor:"red"
-});
+// const dosDaneIcon1105 = L.icon({
+//   iconUrl: "../img/speed-bump.svg",
+//   iconSize: [40, 40],
+//   iconAnchor: [20, 20],
+//   markerColor:"red"
+// });
 
 //   C1104
 const C1104_Layer = L.geoJson(C1104, {
@@ -77,7 +77,7 @@ const C1104_Layer = L.geoJson(C1104, {
 //   C1105
 const C1105_Layer = L.geoJson(C1105, {
   pointToLayer: function (feature, latlng) {
-            return L.marker(latlng, {icon: dosDaneIcon1105});
+            return L.marker(latlng, {icon: dosDaneIcon1104});
   },
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
