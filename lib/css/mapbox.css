@@ -598,7 +598,7 @@
   background-image: linear-gradient(transparent, transparent),
     url(images/icons.svg);
   background-repeat: no-repeat;
-  background-size: 26px 260px;
+  background-size: 26px 26px;
 }
 .leaflet-container.dark .leaflet-control-attribution:after,
 .leaflet-container.dark .leaflet-control-layers-toggle,
