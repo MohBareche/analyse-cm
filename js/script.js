@@ -61,7 +61,21 @@ const C1104_Layer = L.geoJson(C1104, {
   },
 });
 
-
+//   C1105
+const C1105_Layer = L.geoJson(C1105, {
+  onEachFeature: function (feature, layer) {
+    layer.setStyle({ color: "red" });
+    layer.bindPopup(`
+            <p style='margin:0; padding:0; color:red'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
+            <hr>
+            <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1105/1105-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
+            <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1105/1105_Cahier_Charges .pdf" target="_blank">${feature.properties.Devis}</a></p>
+            `);
+    layer.on("mouseover", function () {
+      this.openPopup();
+    });
+  },
+});
 
 
 //   Ruelles vertes
@@ -441,7 +455,7 @@ const overlayMaps = {
 //   "Contrat 1093":C1093,
 //   "Contrat 1096":C1096,
   "Contrat 1104":C1104_Layer,
-//   "Contrat 1105":C1105,
+  "Contrat 1105":C1105_Layer,
 //   "Contrat 1106":C1106,
 //   "Contrat 1108":C1108,
   Arrondissement: arrondissementsLayer,
