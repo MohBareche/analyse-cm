@@ -53,8 +53,9 @@ const dosDaneIcon = L.icon({
 
 //   C1104
 const C1104_Layer = L.geoJson(C1104, {
+  pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {icon: dosDaneIcon});
   onEachFeature: function (feature, layer) {
-    icon:dosDaneIcon,
     layer.bindPopup(`
             <p style='margin:0; padding:0; color:red'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <hr>
@@ -69,8 +70,9 @@ const C1104_Layer = L.geoJson(C1104, {
 
 //   C1105
 const C1105_Layer = L.geoJson(C1105, {
+  pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {icon: dosDaneIcon});
   onEachFeature: function (feature, layer) {
-    icon:dosDaneIcon,
     layer.bindPopup(`
             <p style='margin:0; padding:0; color:red'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <hr>
