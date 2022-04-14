@@ -1,4 +1,4 @@
-const map = L.mapbox
+const map = L
   .map("mapDIV", null, { zoomControl: false })
   .setView([45.55, -73.66], 10);
 const zoomHome = L.Control.zoomHome().addTo(map);
