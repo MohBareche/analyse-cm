@@ -444,12 +444,12 @@ const baseMaps = {
   OSM: osm,
 };
 const overlayMaps = {
-  "Contrat 1093":C1093,
-  "Contrat 1096":C1096,
+//   "Contrat 1093":C1093,
+//   "Contrat 1096":C1096,
   "Contrat 1104":C1104,
-  "Contrat 1105":C1105,
-  "Contrat 1106":C1106,
-  "Contrat 1108":C1108,
+//   "Contrat 1105":C1105,
+//   "Contrat 1106":C1106,
+//   "Contrat 1108":C1108,
   Arrondissement: arrondissementsLayer,
   "Axes mobilité sans trav.": axeMobLayer,
   "Axes sensibles avec trav.": axeSensibleLayer,
