@@ -45,10 +45,16 @@ const travIcon = L.icon({
   iconAnchor: [20, 20],
 });
 
+const dosDaneIcon = L.icon({
+  iconUrl: "../img/speed-bump.png",
+  iconSize: [40, 40],
+  iconAnchor: [20, 20],
+});
 
 //   C1104
 const C1104_Layer = L.geoJson(C1104, {
   onEachFeature: function (feature, layer) {
+    icon:dosDaneIcon,
     layer.bindPopup(`
             <p style='margin:0; padding:0; color:red'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <hr>
@@ -64,6 +70,7 @@ const C1104_Layer = L.geoJson(C1104, {
 //   C1105
 const C1105_Layer = L.geoJson(C1105, {
   onEachFeature: function (feature, layer) {
+    icon:dosDaneIcon,
     layer.bindPopup(`
             <p style='margin:0; padding:0; color:red'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <hr>
