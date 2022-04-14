@@ -49,9 +49,7 @@ const travIcon = L.icon({
 //   C1104
 const C1104_Layer = L.geoJson(C1104, {
   onEachFeature: function (feature, layer) {
-    layer.setStyle({ color: "blue" });
     layer.bindPopup(`
-            
             <p style='margin:0; padding:0;'><strong>Contrat 1104</strong></p>
             <p style='margin:0; padding:0'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <hr>
