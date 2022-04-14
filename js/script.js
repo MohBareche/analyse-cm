@@ -50,8 +50,7 @@ const travIcon = L.icon({
 const C1104_Layer = L.geoJson(C1104, {
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
-            <p style='margin:0; padding:0;'><strong>Contrat 1104</strong></p>
-            <p style='margin:0; padding:0'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
+            <p style='margin:0; padding:0; color:red'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <hr>
             <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1104/1104-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
             <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1104/1104_Cahier_Charges .pdf" target="_blank">${feature.properties.Devis}</a></p>
