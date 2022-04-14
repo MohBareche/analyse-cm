@@ -59,9 +59,6 @@ const C1104_Layer = L.geoJson(C1104, {
     layer.on("mouseover", function () {
       this.openPopup();
     });
-    layer.on("mouseout", function () {
-      this.closePopup();
-    });
   },
 });
 
