@@ -46,12 +46,7 @@ const travIcon = L.icon({
 });
 
 const dosDaneIcon1104 = L.divIcon({
-  iconUrl: "../img/speed-bump.svg",
-  iconSize: [40, 40],
-  iconAnchor: [20, 20],
-  html:'<svg width="40" height="40">
-  <circle cx="20" cy="20" r="40" stroke="green" stroke-width="4" fill="yellow" />
-</svg>'
+  html:¯<svg path=""../img/speed-bump.svg"" width="40" height="40"><circle cx="20" cy="20" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>¯
 });
 
 const dosDaneIcon1105 = L.icon({
