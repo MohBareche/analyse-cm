@@ -49,14 +49,14 @@ const dosDaneIcon1104 = L.icon({
   iconUrl: "../img/speed-bump.svg",
   iconSize: [40, 40],
   iconAnchor: [20, 20],
-  fill:"green"
+  markerColor:"green"
 });
 
 const dosDaneIcon1105 = L.icon({
   iconUrl: "../img/speed-bump.svg",
   iconSize: [40, 40],
   iconAnchor: [20, 20],
-  fill:"red"
+  markerColor:"red"
 });
 
 //   C1104
