@@ -375,7 +375,6 @@ const geoJsonLayer = L.geoJson(casernes, {
             <div>
               <p style='margin:0; padding:0'><strong>Caserne :</strong> ${feature.properties.CASERNE}</p>
               <p style='margin:0; padding:0'><strong>Arrond.:</strong> ${feature.properties.ARRONDISSEMENT}</p>
-//               <a href="./data/${feature.properties.id}.jpg" target="_blank">Photo</a>
             </div>
             `);
     } else {
