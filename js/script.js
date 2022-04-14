@@ -82,7 +82,7 @@ const C1105_Layer = L.geoJson(C1105, {
   },
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
-            <p style='margin:0; padding:0; color:red'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
+            <p style='margin:0; padding:0; color:#f5df4a'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <hr>
             <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1105/1105-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
             <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1105/1105_Cahier_Charges .pdf" target="_blank">${feature.properties.Devis}</a></p>
