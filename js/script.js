@@ -484,7 +484,7 @@ const overlayMaps = {
   "Google Street View": markerGSV,
 };
 
-L.control.layers(baseMaps, overlayMaps, { collapsed: false }).addTo(map);
+L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
 
 map.addControl(
   new L.Control.Fullscreen({
