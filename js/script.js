@@ -375,7 +375,7 @@ const geoJsonLayer = L.geoJson(casernes, {
             <div>
               <p style='margin:0; padding:0'><strong>Caserne :</strong> ${feature.properties.CASERNE}</p>
               <p style='margin:0; padding:0'><strong>Arrond.:</strong> ${feature.properties.ARRONDISSEMENT}</p>
-              <a href="./data/${feature.properties.id}.jpg" target="_blank">Photo</a>
+//               <a href="./data/${feature.properties.id}.jpg" target="_blank">Photo</a>
             </div>
             `);
     } else {
@@ -388,9 +388,9 @@ const geoJsonLayer = L.geoJson(casernes, {
     layer.on("mouseover", function () {
       this.openPopup();
     });
-//     layer.on("mouseout", function () {
-//       this.closePopup();
-//     });
+    layer.on("mouseout", function () {
+      this.closePopup();
+    });
   },
 });
 const casernesMarkers = markers.addLayer(geoJsonLayer);
