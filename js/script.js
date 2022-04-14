@@ -45,11 +45,11 @@ const travIcon = L.icon({
   iconAnchor: [20, 20],
 });
 
-const dosDaneIcon1104 = L.icon({
+const dosDaneIcon1104 = L.divIcon({
   iconUrl: "../img/speed-bump.svg",
   iconSize: [40, 40],
   iconAnchor: [20, 20],
-  markerColor:"green"
+  html:'Hello'
 });
 
 const dosDaneIcon1105 = L.icon({
