@@ -46,7 +46,7 @@ const travIcon = L.icon({
 });
 
 const dosDaneIcon1104 = L.divIcon({
-  html:¯<svg path=""../img/speed-bump.svg"" width="40" height="40"><circle cx="20" cy="20" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>¯
+  html:¯<img src=""../img/speed-bump.svg"" width="40" height="40"/>¯
 });
 
 // const dosDaneIcon1105 = L.icon({
