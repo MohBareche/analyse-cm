@@ -64,7 +64,6 @@ const C1104_Layer = L.geoJson(C1104, {
 //   C1105
 const C1105_Layer = L.geoJson(C1105, {
   onEachFeature: function (feature, layer) {
-    layer.setStyle({ color: "red" });
     layer.bindPopup(`
             <p style='margin:0; padding:0; color:red'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <hr>
