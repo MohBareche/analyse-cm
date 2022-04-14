@@ -46,8 +46,7 @@ const travIcon = L.icon({
 });
 
 const dosDaneIcon1104 = L.icon({
-  iconUrl:`<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+  iconUrl:"<?xml version="1.0" encoding="iso-8859-1"?>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <path fill="#303C42" d="M23.7392578,19.8994141L13.8911133,2.0791016C13.5234375,1.4135742,12.8227539,1,12.0620117,1h-0.1240234
@@ -57,38 +56,7 @@ const dosDaneIcon1104 = L.icon({
 	C6.2236328,19,6,18.7763672,6,18.5v-2C6,16.2236328,6.2236328,16,6.5,16h0.6640625C7.5415039,15.1103516,8.5600586,14.5,9.75,14.5
 	c0.9287109,0,1.753418,0.3720703,2.25,0.9580078C12.496582,14.8720703,13.3212891,14.5,14.25,14.5
 	c1.1899414,0,2.2084961,0.6103516,2.5859375,1.5H17.5c0.2763672,0,0.5,0.2236328,0.5,0.5V18.5z"/>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg>
-`
+<g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>"
 });
 
 // const dosDaneIcon1105 = L.icon({
