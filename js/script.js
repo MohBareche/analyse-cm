@@ -45,6 +45,31 @@ const travIcon = L.icon({
   iconAnchor: [20, 20],
 });
 
+
+//   C1104
+const C1104 = L.geoJson(C1104, {
+  onEachFeature: function (feature, layer) {
+    layer.setStyle({ color: "blue" });
+    layer.bindPopup(`
+            
+            <p style='margin:0; padding:0;'><strong>Contrat 1104</strong></p>
+            <p style='margin:0; padding:0'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
+            <hr>
+            <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1104/1104-1.pdf" target="_blank">${feature.properties.Plan}</a></p>
+            <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1104/1104_Cahier_Charges.pdf" target="_blank">${feature.properties.Devis}</a></p>
+            `);
+    layer.on("mouseover", function () {
+      this.openPopup();
+    });
+    layer.on("mouseout", function () {
+      this.closePopup();
+    });
+  },
+});
+
+
+
+
 //   Ruelles vertes
 const ruellesVertesLayer = L.geoJson(ruelles_vertes, {
   onEachFeature: function (feature, layer) {
