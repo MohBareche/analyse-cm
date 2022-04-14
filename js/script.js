@@ -64,7 +64,7 @@ const C1104_Layer = L.geoJson(C1104, {
   },
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
-            <p style='margin:0; padding:0; color:#4ef54a; background-color: black; padding:5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
+            <p style='margin:0; padding:0; color:#4ef54a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1104/1104-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
             <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1104/1104_Cahier_Charges .pdf" target="_blank">${feature.properties.Devis}</a></p>
             `);
@@ -81,7 +81,7 @@ const C1105_Layer = L.geoJson(C1105, {
   },
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
-            <p style='margin:0; padding:0; color:#f5df4a; background-color: black; padding:5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
+            <p style='margin:0; padding:0; color:#f5df4a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1105/1105-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
             <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1105/1105_Cahier_Charges .pdf" target="_blank">${feature.properties.Devis}</a></p>
             `);
