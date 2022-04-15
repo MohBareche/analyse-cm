@@ -68,7 +68,7 @@ const C1104_Layer = L.geoJson(C1104, {
             <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1104/1104-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
             <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1104/1104_Cahier_Charges .pdf" target="_blank">${feature.properties.Devis}</a></p>
             `);
-    layer.on("mouseover", function () {
+    layer.on("click", function () {
       this.openPopup();
     });
   },
@@ -85,7 +85,7 @@ const C1105_Layer = L.geoJson(C1105, {
             <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1105/1105-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
             <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1105/1105_Cahier_Charges .pdf" target="_blank">${feature.properties.Devis}</a></p>
             `);
-    layer.on("mouseover", function () {
+    layer.on("click", function () {
       this.openPopup();
     });
   },
