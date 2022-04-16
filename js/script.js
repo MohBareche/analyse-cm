@@ -105,7 +105,7 @@ const C1108_Layer = L.geoJson(C1108, {
     layer.bindPopup(`
             <p style='margin:0; padding:0; color:#f5df4a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1108/1108-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
-            <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1108/1108_Cahier_Charges .pdf" target="_blank">${feature.properties.Devis}</a></p>
+            <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1108/1108_Cahier des charges .pdf" target="_blank">${feature.properties.Devis}</a></p>
             `);
     layer.on("click", function () {
       this.openPopup();
