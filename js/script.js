@@ -484,7 +484,13 @@ const overlayMaps = {
 };
 
 L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
-L.control.locate().addTo(map);
+L.control.locate(
+{
+    flyTo:true,
+    strings: {
+        title: "Montre-moi où je suis !"
+    }
+}).addTo(map);
 map.addControl(
   new L.Control.Fullscreen({
     title: {
