@@ -2,7 +2,6 @@ const map = L.mapbox
   .map("mapDIV", null, { zoomControl: false })
   .setView([45.55, -73.66], 10);
 const zoomHome = L.Control.zoomHome().addTo(map);
-L.control.locate().addTo(map);
 L.mapbox.accessToken =
   "pk.eyJ1IjoibWJhcmVjaGUiLCJhIjoiY2pkbHpqZjQ3MGVibzJycWhka203dDNtYiJ9.GLpfZW2gcYULhuIa6vwgFw";
 
@@ -485,7 +484,7 @@ const overlayMaps = {
 };
 
 L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
-
+L.control.locate().addTo(map);
 map.addControl(
   new L.Control.Fullscreen({
     title: {
@@ -584,3 +583,4 @@ searchControl.on("results", function (data) {
 
 // Échelle à droite en bas
 L.control.scale({ position: "bottomright" }).addTo(map);
+
