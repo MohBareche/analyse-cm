@@ -487,7 +487,7 @@ const overlayMaps = {
   "Contrat 1104":C1104_Layer,
   "Contrat 1105":C1105_Layer,
 //   "Contrat 1106":C1106,
-//   "Contrat 1108":C1108,
+  "Contrat 1108":C1108_Layer,
   Arrondissement: arrondissementsLayer,
   "Axes mobilité sans trav.": axeMobLayer,
   "Axes sensibles avec trav.": axeSensibleLayer,
