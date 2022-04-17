@@ -167,7 +167,7 @@ const C1108_Layer = L.geoJson(C1108, {
             return L.marker(latlng, {icon: dosDaneIcon1108});
   },
   onEachFeature: function (feature, layer) {
-    if(layer instanceOf L.Polyline ){
+    if(layer instanceof L.Polyline ){
       layer.setStyle({
         "color":"#3388ff",
         "weight":3
