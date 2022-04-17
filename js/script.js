@@ -170,7 +170,7 @@ const C1108_Layer = L.geoJson(C1108, {
     if(layer instanceof L.Polyline ){
       layer.setStyle({
         "color":"#3388ff",
-        "weight":3
+        "weight":5
       })
     }
     layer.bindPopup(`
