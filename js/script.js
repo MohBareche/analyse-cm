@@ -86,7 +86,7 @@ const C1096_Layer = L.geoJson(C1096, {
     if(feature.properties.Plan == 2){
       return L.marker(latlng, {icon: dosDaneIcon1096Nar})
     }        
-//     return L.marker(latlng, {icon: dosDaneIcon1104});
+    return L.polyline(latlngs, {color: 'red'})
   },
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
