@@ -56,6 +56,12 @@ const dosDaneIcon1104Nar = L.icon({
   iconAnchor: [15, 15],
 });
 
+const dosDaneIcon1093Nar = L.icon({
+  iconUrl:"../img/speed_bump_1093_nar.svg",
+  iconSize: [30, 30],
+  iconAnchor: [15, 15],
+});
+
 const dosDaneIcon1105 = L.icon({
   iconUrl: "../img/speed_bump_1105.svg",
   iconSize: [30, 30],
@@ -66,6 +72,23 @@ const dosDaneIcon1108 = L.icon({
   iconUrl: "../img/speed_bump_1108.svg",
   iconSize: [30, 30],
   iconAnchor: [15, 15],
+});
+
+//   C1093
+const C1093_Layer = L.geoJson(C1093, {
+  pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {icon: dosDaneIcon1093Nar});
+  },
+  onEachFeature: function (feature, layer) {
+    layer.bindPopup(`
+            <p style='margin:0; padding:0; color:#f5df4a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
+            <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1093/1093-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
+            <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1093/1093_AO.pdf" target="_blank">${feature.properties.Devis}</a></p>
+            `);
+    layer.on("click", function () {
+      this.openPopup();
+    });
+  },
 });
 
 //   C1104
@@ -497,7 +520,7 @@ const baseMaps = {
   OSM: osm,
 };
 const overlayMaps = {
-//   "Contrat 1093":C1093,
+  "Contrat 1093":C1093_Layer,
 //   "Contrat 1096":C1096,
   "Contrat 1104":C1104_Layer,
   "Contrat 1105":C1105_Layer,
