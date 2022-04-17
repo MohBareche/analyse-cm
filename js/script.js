@@ -168,10 +168,10 @@ const C1108_Layer = L.geoJson(C1108, {
   },
   onEachFeature: function (feature, layer) {
     if(layer instanceOf L.Polyline ){
-      layer.setStyle ={
-        "color":"",
+      layer.setStyle({
+        "color":"#3388ff",
         "weight":3
-      }
+      })
     }
     layer.bindPopup(`
             <p style='margin:0; padding:0; color:#f5df4a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
