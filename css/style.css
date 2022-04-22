@@ -48,7 +48,7 @@ table{
 	table, th, td {
 	  border: 1px solid black;
 	  border-collapse: collapse;
-	  padding:5px;
+	  padding:2px;
 	  border-radius:5px;
 	}
 
@@ -66,6 +66,6 @@ table{
 	 text-align:center;
 	}
 
-.table1 {
+.table1 tr{
 	padding-top: 10px;
 }
