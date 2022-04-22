@@ -233,9 +233,6 @@ const C1106_Layer = L.geoJson(C1106, {
 						<td><strong>Longitude </strong>${feature.geometry.coordinates[0]}</td>
 					</tr>
 				</table>
-			  `);
-           
-           
            `);
     layer.on("click", function () {
       this.openPopup();
