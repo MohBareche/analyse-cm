@@ -1,7 +1,7 @@
 let C1106 = {
 "type": "FeatureCollection",
 "features": [
-{ "type": "Feature", "properties": {"Contrat":"1106", "Numéro":  1 ,"Devis":"devis"}, "geometry": { "type": "Point", "coordinates": [ -73.647494837830, 45.581161204115 ] } },
+{ "type": "Feature", "properties": {"Contrat":"1106", "Numéro":  1 ,"X":293289.8144,"Y":5049038.7842,"Devis":"devis"}, "geometry": { "type": "Point", "coordinates": [ -73.647494837830, 45.581161204115 ] } },
 { "type": "Feature", "properties": {"Contrat":"1106", "Numéro":  2 ,"Devis":"devis"}, "geometry": { "type": "Point", "coordinates": [ -73.648103647121, 45.581545208345 ] } },
 { "type": "Feature", "properties": {"Contrat":"1106", "Numéro":  3,"Devis":"devis" }, "geometry": { "type": "Point", "coordinates": [ -73.648970296795, 45.582090542325 ] } },
 { "type": "Feature", "properties": {"Contrat":"1106", "Numéro":  4 ,"Devis":"devis"}, "geometry": { "type": "Point", "coordinates": [ -73.649899418384, 45.582675544033 ] } },
