@@ -208,12 +208,35 @@ const C1106_Layer = L.geoJson(C1106, {
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
             <p style='margin:0; padding:0; color:#f5df4a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
-            <p style='margin:0; padding:0'><strong>Numéro : </strong> ${feature.properties.Numero}</p>
-            <p style='margin:0; padding:0'><strong>X : </strong> ${feature.properties.X}</p>
-            <p style='margin:0; padding:0'><strong>Y : </strong> ${feature.properties.Y}</p>
-            <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1106/1106-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
-            <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1106/1106_Cahier_Charges.pdf" target="_blank">${feature.properties.Devis}</a></p>
-            `);
+				<table class="table1">
+				<caption>Identification</caption>
+					<tr>
+						<th># Dos-d'âne</th>
+						<td>${feature.properties.Numero}</td>
+					</tr>
+          <tr>
+						<th>Devis</th>
+						<td><a href="./data/1106/1106_Cahier_Charges.pdf" target="_blank">${feature.properties.Devis}</a></td>
+					</tr>
+				</table>
+				<br>
+				<table class="table2">
+				<caption>Coordonnées</caption>
+					<tr>
+						<th colspan="2">NAD83 MTM Zone 8</th>
+						<td><strong>X </strong>${feature.properties.X}</td>
+						<td><strong>Y </strong>${feature.properties.Y}</td>		
+					</tr>
+					<tr>
+						<th colspan="2">WGS 84 (GPS)</th>
+						<td><strong>Latitude </strong>${feature.geometry.coordinates[1]}	</td>
+						<td><strong>Longitude </strong>${feature.geometry.coordinates[0]}</td>
+					</tr>
+				</table>
+			  `);
+           
+           
+           `);
     layer.on("click", function () {
       this.openPopup();
     });
