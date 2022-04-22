@@ -52,6 +52,9 @@ table{
 	  border-radius:5px;
 	}
 
+.table1{
+	padding-top: 10px;
+}
 	.table1 td:nth-child(odd), .table1 th:nth-child(odd) {
 	  background-color: #D6EEEE;
 	  width:50%;
