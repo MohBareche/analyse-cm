@@ -207,9 +207,9 @@ const C1106_Layer = L.geoJson(C1106, {
   },
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
-            <p style='margin:0; padding:0; color:#f5df4a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
+            <p style='margin:0; padding:0; color:#f5df4a; background-color: black; padding:0 5px; border-radius:5px; text-align:center'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
 				<table class="table1">
-				<caption>Identification et documents</caption>
+				<caption><h4>Identification et documents</h4></caption>
 					<tr>
 						<th># Dos-d'âne</th>
 						<td>${feature.properties.Numero}</td>
@@ -221,7 +221,7 @@ const C1106_Layer = L.geoJson(C1106, {
 				</table>
 				<br>
 				<table class="table2">
-				<caption>Coordonnées du centre</caption>
+				<caption><h4>Coordonnées du centre</h4></caption>
 					<tr>
 						<th colspan="2">NAD83 MTM Zone 8</th>
 						<td><strong>X </strong>${feature.properties.X}</td>
