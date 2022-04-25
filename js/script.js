@@ -221,7 +221,7 @@ const C1106_Layer = L.geoJson(C1106, {
 				</table>
 				<br>
 				<table class="table2">
-				<caption><h5>Coordonnées du centre</h5></caption>
+				<caption><h5>Coordonnées du centre de dos-d'âne</h5></caption>
 					<tr>
 						<th colspan="2">NAD83 MTM Zone 8</th>
 						<td><strong>X </strong>${feature.properties.X}</td>
