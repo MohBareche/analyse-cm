@@ -229,8 +229,8 @@ const C1106_Layer = L.geoJson(C1106, {
 					</tr>
 					<tr>
 						<th colspan="2">WGS 84 (GPS)</th>
-						<td><strong>Latitude </strong>${feature.geometry.coordinates[1]}	</td>
-						<td><strong>Longitude </strong>${feature.geometry.coordinates[0]}</td>
+						<td><strong>Latitude </strong>${feature.geometry.coordinates[1].toFixed(4)}	</td>
+						<td><strong>Longitude </strong>${feature.geometry.coordinates[0].toFixed(4)}</td>
 					</tr>
 				</table>
            `);
