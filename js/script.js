@@ -616,7 +616,7 @@ const baseMaps = {
 const overlayMaps = {
   "Contrat 1093":C1093_Layer,
   "Contrat 1096":C1096_Layer,
-  "Hamdi":C1104_Layer,
+  "Contrat 1104":C1104_Layer,
   "Contrat 1105":C1105_Layer,
   "Contrat 1106":C1106_Layer,
   "Contrat 1108":C1108_Layer,
