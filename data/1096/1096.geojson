@@ -16,4 +16,24 @@ let C1096 = {"type":"FeatureCollection","features":[{"type":"Feature","propertie
           ]
         ]
       }
-    }]}
+    },
+                                                    {
+      "type": "Feature",
+      "properties": {
+          "Contrat":"1096","Plan":"N/A","Détail":"N/A","Devis":"devis"  
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.64548467099667,
+            45.59245491654044
+          ],
+          [
+            -73.64770151674747,
+            45.59455512348889
+          ]
+        ]
+      }
+    }
+                                                   ]}
