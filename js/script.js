@@ -124,7 +124,7 @@ const C1096_Layer = L.geoJson(C1096, {
            <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1096/1096_Cahier des charges.pdf" target="_blank">${feature.properties.Devis}</a></p>
          `);
       } 
-    }
+    
     
     layer.on("click", function () {
       this.openPopup();
