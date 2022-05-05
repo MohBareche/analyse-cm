@@ -245,9 +245,11 @@ const C1106_Layer = L.geoJson(C1106, {
 					</tr>
 				</table>
            `);
+	  
     layer.on("click", function () {
       this.openPopup();
     });
+  };
   },
 });
 
