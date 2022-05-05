@@ -107,8 +107,9 @@ const C1096_Layer = L.geoJson(C1096, {
       layer.setStyle({
         "color": "#1fddd0",
         "weight": 5
-      });     
-      if (feature.properties.Plan = "N/A"){
+      });
+    };
+    if (feature.properties.Plan = "N/A"){
 	 layer.bindPopup(`
            <p style='margin:0; padding:0; color:#4ef54a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
            <p style='margin:0; padding:0'><strong>Plan : </strong> Aucun </p>
@@ -128,7 +129,7 @@ const C1096_Layer = L.geoJson(C1096, {
     layer.on("click", function () {
       this.openPopup();
     });
-  },
+  
 });
 
 
