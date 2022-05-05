@@ -129,7 +129,7 @@ const C1096_Layer = L.geoJson(C1096, {
     layer.on("click", function () {
       this.openPopup();
     });
-  );
+  };
 });
 
 
