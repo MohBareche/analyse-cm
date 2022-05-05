@@ -129,7 +129,7 @@ const C1096_Layer = L.geoJson(C1096, {
     layer.on("click", function () {
       this.openPopup();
     });
-  });
+  }
 });
 
 
@@ -248,9 +248,8 @@ const C1106_Layer = L.geoJson(C1106, {
 	  
     layer.on("click", function () {
       this.openPopup();
-    });
-  };
-  },
+    })
+  }
 });
 
 //   Ruelles vertes
@@ -639,9 +638,9 @@ const overlayMaps = {
   Patrimoine: patrimoineLayer,
   "Ruelles vertes": ruellesVertesLayer,
   Casernes: casernesMarkers,
-  "Secteurs AGIR": secteursAgirLayer,
-  Inspecteurs: inspecteursLayer,
-  Horticulteurs: horticulteursLayer,
+//   "Secteurs AGIR": secteursAgirLayer,
+//   Inspecteurs: inspecteursLayer,
+//   Horticulteurs: horticulteursLayer,
   "Google Street View": markerGSV,
 };
 
@@ -716,24 +715,7 @@ map.on("draw:created", function (e) {
   drawnItems.addLayer(layer);
 });
 
-// const geocoder = L.Control.geocoder({
-//   geocoder: new L.Control.Geocoder.Nominatim({
-//     geocodingQueryParams: {
-//       country: "CA",
-//       city: "Montreal",
-//     },
-//   }),
-//   defaultMarkGeocode: false,
-//   position: "topleft",
-//   collapsed: true,
-//   placeholder: "Entrez votre adress...",
-// })
-//   .on("markgeocode", function (e) {
-//     let center = e.geocode.center;
-//     L.marker(center, { icon: travIcon }).addTo(map);
-//     map.flyTo(center, 17);
-//   })
-//   .addTo(map);
+
 let arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider({ countries: "CA" });
 const searchControl = L.esri.Geocoding.geosearch({
   // collapseAfterResult: false,
