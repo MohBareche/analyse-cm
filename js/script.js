@@ -240,9 +240,17 @@ const C1106_Layer = L.geoJson(C1106, {
 						<td>${feature.properties.Numero}</td>
 						
 					</tr>
-          <tr>
+                                        <tr>
 						<th>Devis</th>
 						<td><a href="./data/1106/1106_Cahier_Charges.pdf" target="_blank">${feature.properties.Devis}</a></td>
+					</tr>
+					<tr>
+						<th>Début travaux</th>
+						<td>${feature.properties.Debut}</td>
+					</tr>
+					<tr>
+						<th>Fin travaux</th>
+						<td>${feature.properties.Fin}</td>
 					</tr>
 				</table>
 				<br>
