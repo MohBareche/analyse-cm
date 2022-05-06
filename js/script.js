@@ -100,6 +100,8 @@ const C1096_Layer = L.geoJson(C1096, {
           <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1096/1096-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
           <p style='margin:0; padding:0'><strong>Détail : </strong> <a href="./data/1096/1096-3.pdf" target="_blank">${feature.properties.Détail}</a></p>
           <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1096/1096_Cahier des charges.pdf" target="_blank">${feature.properties.Devis}</a></p>
+	  <p style='margin:0; padding:0'><strong>Début Travaux : </strong> ${feature.properties.Debut}</p>
+	  <p style='margin:0; padding:0'><strong>Fin Travaux : </strong> ${feature.properties.Fin}</p>
        `);
     }
     
@@ -115,6 +117,8 @@ const C1096_Layer = L.geoJson(C1096, {
            <p style='margin:0; padding:0'><strong>Plan : </strong> Aucun </p>
 	   <p style='margin:0; padding:0'><strong>Détail : </strong> <a href="./data/1096/1096-${feature.properties.Détail}.pdf" target="_blank">${feature.properties.Détail}</a></p>
            <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1096/1096_Cahier des charges.pdf" target="_blank">${feature.properties.Devis}</a></p>
+	   <p style='margin:0; padding:0'><strong>Début Travaux : </strong> ${feature.properties.Debut}</p>
+	   <p style='margin:0; padding:0'><strong>Fin Travaux : </strong> ${feature.properties.Fin}</p>
          `);
       }
       else {
@@ -122,6 +126,8 @@ const C1096_Layer = L.geoJson(C1096, {
            <p style='margin:0; padding:0; color:#4ef54a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
            <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1096/1096-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
            <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1096/1096_Cahier des charges.pdf" target="_blank">${feature.properties.Devis}</a></p>
+	   <p style='margin:0; padding:0'><strong>Début Travaux : </strong> ${feature.properties.Debut}</p>
+	   <p style='margin:0; padding:0'><strong>Fin Travaux : </strong> ${feature.properties.Fin}</p>
          `);
       } 
     
@@ -143,7 +149,9 @@ const C1093_Layer = L.geoJson(C1093, {
             <p style='margin:0; padding:0; color:#f5df4a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1093/1093-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
             <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1093/1093_AO.pdf" target="_blank">${feature.properties.Devis}</a></p>
-            `);
+            <p style='margin:0; padding:0'><strong>Début Travaux : </strong> ${feature.properties.Debut}</p>
+	    <p style='margin:0; padding:0'><strong>Fin Travaux : </strong> ${feature.properties.Fin}</p>
+	    `);
     layer.on("click", function () {
       this.openPopup();
     });
@@ -163,6 +171,8 @@ const C1104_Layer = L.geoJson(C1104, {
             <p style='margin:0; padding:0; color:#4ef54a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1104/1104-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
             <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1104/1104_Cahier_Charges .pdf" target="_blank">${feature.properties.Devis}</a></p>
+	    <p style='margin:0; padding:0'><strong>Début Travaux : </strong> ${feature.properties.Debut}</p>
+	    <p style='margin:0; padding:0'><strong>Fin Travaux : </strong> ${feature.properties.Fin}</p>
             `);
     layer.on("click", function () {
       this.openPopup();
@@ -180,6 +190,8 @@ const C1105_Layer = L.geoJson(C1105, {
             <p style='margin:0; padding:0; color:#f5df4a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1105/1105-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
             <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1105/1105_Cahier_Charges .pdf" target="_blank">${feature.properties.Devis}</a></p>
+	    <p style='margin:0; padding:0'><strong>Début Travaux : </strong> ${feature.properties.Debut}</p>
+	    <p style='margin:0; padding:0'><strong>Fin Travaux : </strong> ${feature.properties.Fin}</p>
             `);
     layer.on("click", function () {
       this.openPopup();
@@ -203,6 +215,8 @@ const C1108_Layer = L.geoJson(C1108, {
             <p style='margin:0; padding:0; color:#f5df4a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
             <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1108/1108-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
             <p style='margin:0; padding:0'><strong>Devis : </strong> <a href="./data/1108/1108_Cahier des charges .pdf" target="_blank">${feature.properties.Devis}</a></p>
+	    <p style='margin:0; padding:0'><strong>Début Travaux : </strong> ${feature.properties.Debut}</p>
+	    <p style='margin:0; padding:0'><strong>Fin Travaux : </strong> ${feature.properties.Fin}</p>
             `);
     layer.on("click", function () {
       this.openPopup();
@@ -224,6 +238,7 @@ const C1106_Layer = L.geoJson(C1106, {
 					<tr>
 						<th># Dos-d'âne</th>
 						<td>${feature.properties.Numero}</td>
+						
 					</tr>
           <tr>
 						<th>Devis</th>
