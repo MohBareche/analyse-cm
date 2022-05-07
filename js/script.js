@@ -28,6 +28,16 @@ const googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}
     subdomains:['mt0','mt1','mt2','mt3']
 })
 
+const googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+
+const googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+
 const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 18,
   attribution:
@@ -655,11 +665,13 @@ map.on("move", function () {
 //  Control Groups et overlays
 const baseMaps = {
   "Mapbox Light": Light,
-  "MapboxStreets": Streets,
-  "MapboxOutdoors": Outdoors,
+  "Mapbox Streets": Streets,
+  "Mapbox Outdoors": Outdoors,
   "Mapbox Satellite": Satellite,
   "Google Streets": googleStreets,
   "Google Satellite": googleSat,
+  "Google Hybrid": googleHybrid,
+  "Google Terrain": googleTerrain ,
   "ISRI Streets": esriTile,
   "Open Street Map": osm,
 };
