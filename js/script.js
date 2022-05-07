@@ -654,14 +654,14 @@ map.on("move", function () {
 
 //  Control Groups et overlays
 const baseMaps = {
-  Light: Light,
-  Streets: Streets,
-  Outdoors: Outdoors,
-  Satellite: Satellite,
-  "Google Street": googleStreets,
-  "Google Sat": googleSat,
-  ISRI: esriTile,
-  OSM: osm,
+  "Mapbox Light": Light,
+  "MapboxStreets": Streets,
+  "MapboxOutdoors": Outdoors,
+  "Mapbox Satellite": Satellite,
+  "Google Streets": googleStreets,
+  "Google Satellite": googleSat,
+  "ISRI Streets": esriTile,
+  "Open Street Map": osm,
 };
 const overlayMaps = {
   "Contrat 1093":C1093_Layer,
