@@ -15,6 +15,19 @@ const Streets = L.mapbox.styleLayer("mapbox://styles/mapbox/streets-v11");
 const Outdoors = L.mapbox.styleLayer("mapbox://styles/mapbox/outdoors-v11");
 const Satellite = L.mapbox.styleLayer("mapbox://styles/mapbox/satellite-v9");
 
+const googleStreets = L.tileLayer(
+        "http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+        {
+          maxZoom: 20,
+          subdomains: ["mt0", "mt1", "mt2", "mt3"],
+        }
+      )
+
+const googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+})
+
 const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 18,
   attribution:
@@ -645,6 +658,8 @@ const baseMaps = {
   Streets: Streets,
   Outdoors: Outdoors,
   Satellite: Satellite,
+  "Google Street": googleStreets,
+  "Google Sat": googleSat,
   ISRI: esriTile,
   OSM: osm,
 };
