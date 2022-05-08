@@ -11,19 +11,12 @@ body {
 
 #description {
   position: fixed;
-  bottom: 20px;
+  bottom: 25px;
   left: 10px;
-  width: 100px;
+  width: 50px;
   margin-bottom: 30px;
   padding: 10px;
-  background-color: rgba(231, 238, 208, 0.7);
-  border: 1px solid grey;
-  border-radius: 5px;
   z-index: 800;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
 }
 
 table{
