@@ -18,6 +18,9 @@ body {
   padding: 10px;
   z-index: 800;
 }
+#description:hover{
+  cursor:pointer;
+}
 
 table{
 	width:100%;
