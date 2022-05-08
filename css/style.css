@@ -13,7 +13,7 @@ body {
   position: fixed;
   bottom: 20px;
   left: 10px;
-  width: auto;
+  width: 100px;
   margin-bottom: 30px;
   padding: 10px;
   background-color: rgba(231, 238, 208, 0.7);
@@ -25,13 +25,6 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-
-#description {
-  padding: 0;
-  margin: 0;
-  width:100px;
-}
-
 
 table{
 	width:100%;
