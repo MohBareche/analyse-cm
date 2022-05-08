@@ -9,18 +9,6 @@ body {
   height: 100vh;
 }
 
-#description {
-  position: fixed;
-  bottom: 30px;
-  left: 10px;
-  width: 40px;
-  padding: 10px;
-  z-index: 800;
-}
-#description:hover{
-  cursor: pointer;
-}
-
 table{
 	width:100%;
 	}
