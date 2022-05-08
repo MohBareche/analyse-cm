@@ -655,7 +655,7 @@ const pegmanIcon = L.icon({
   iconAnchor: [20, 20],
 });
 
-// Add a marker to the centre of the map
+// Add a marker to the center of the map
 const markerGSV = L.marker(map.getCenter(), { icon: pegmanIcon });
 // Make sure the marker stays in the centre when the map is moved
 map.on("move", function () {
@@ -742,14 +742,7 @@ const drawControl = new L.Control.Draw({
       metric: true,
       repeatMode: true,
     },
-    rectangle: {
-      shapeOptions: {
-        color: "#490066",
-      },
-      showArea: true,
-      metric: true,
-      repeatMode: true,
-    },
+    rectangle: false,
     circlemarker: false,
     marker: true,
     circle: false,
@@ -778,6 +771,7 @@ searchControl.on("results", function (data) {
   results.clearLayers();
   for (let i = data.results.length - 1; i >= 0; i--) {
     results.addLayer(L.marker(data.results[i].latlng, { icon: travIcon }));
+	  
   }
 });
 
