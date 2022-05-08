@@ -19,7 +19,7 @@ body {
   z-index: 800;
 }
 #description:hover{
-  cursor:pointer;
+  cursor: pointer;
 }
 
 table{
