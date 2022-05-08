@@ -666,12 +666,12 @@ map.on("move", function () {
 const baseMaps = {
   "Mapbox Light": Light,
   "Mapbox Streets": Streets,
-  "Mapbox Outdoors": Outdoors,
-  "Mapbox Satellite": Satellite,
+//   "Mapbox Outdoors": Outdoors,
+//   "Mapbox Satellite": Satellite,
   "Google Streets": googleStreets,
   "Google Satellite": googleSat,
-  "Google Hybrid": googleHybrid,
-  "Google Terrain": googleTerrain ,
+//   "Google Hybrid": googleHybrid,
+//   "Google Terrain": googleTerrain ,
   "ISRI Streets": esriTile,
   "Open Street Map": osm,
 };
