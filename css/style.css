@@ -9,6 +9,9 @@ body {
   height: 100vh;
 }
 
+.icon-green {
+  color: green;
+}
 #description {
   position: fixed;
   bottom: 20px;
