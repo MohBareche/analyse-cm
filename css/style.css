@@ -15,7 +15,7 @@ body {
   left: 10px;
   width: 40px;
   padding: 10px;
-  
+  z-index:1000;
 }
 #description:hover{
   cursor: pointer;
