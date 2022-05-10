@@ -298,6 +298,60 @@ const C1106_Layer = L.geoJson(C1106, {
   }
 });
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//   Inspecteurs cadre bati
+function getColorInspection(feature) {
+  switch (feature) {
+    case "1":
+      return "#704709";
+    case "2":
+      return "red";
+    case "3":
+      return "#940043";
+    case "4":
+      return "#9004e0";
+    case "5":
+      return "#0B7A75";
+    case "6":
+      return "#147ec9";
+  }
+}
+function styleInspection(feature) {
+  return {
+    color: getColorInspection(feature.properties.Secteur),
+    fillColor: getColorInspection(feature.properties.Secteur),
+    opacity: 1,
+    fillOpacity: 0.4,
+  };
+}
+const inspectionLayer = L.geoJson(inspection, {
+  style: styleInspection,
+  onEachFeature: function (feature, layer) {
+    layer.bindPopup(`
+            <p style='margin:0; padding:0;'><strong>Secteur : </strong>${feature.properties.Secteur}</p>
+            <p style='margin:0; padding:0'><strong>Inspecteur :</strong> ${feature.properties.Inspecteur}</p>
+            <p style='margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Email}</p>
+            <p style='margin:0; padding:0'><strong>Téléphone :</strong>514 888-6000 poste ${feature.properties.poste}</p>
+	    <p style='margin:0; padding:0'><strong>Cellulaire :</strong> ${feature.properties.cell} </p>
+            `);
+    layer.on("mouseover", function () {
+      this.setStyle({
+        fillOpacity: 0.2,
+        opacity: 1,
+      });
+    });
+    layer.on("mouseout", function () {
+      this.setStyle({
+        fillOpacity: 0.4,
+        opacity: 1,
+      });
+    });
+  },
+});
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 //   Ruelles vertes
 const ruellesVertesLayer = L.geoJson(ruelles_vertes, {
   onEachFeature: function (feature, layer) {
