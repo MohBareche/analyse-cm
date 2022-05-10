@@ -312,9 +312,9 @@ function getColorInspection(feature) {
     case "4":
       return "#9004e0";
     case "5":
-      return "#0B7A75";
+      return "green";
     case "6":
-      return "#147ec9";
+      return "blue";
   }
 }
 function styleInspection(feature) {
@@ -329,11 +329,11 @@ const inspectionLayer = L.geoJson(inspection, {
   style: styleInspection,
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
-            <p style='margin:0; padding:0;'><strong>Secteur : </strong>${feature.properties.Secteur}</p>
-            <p style='margin:0; padding:0'><strong>Inspecteur :</strong> ${feature.properties.Inspecteur}</p>
-            <p style='margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Courriel}</p>
-            <p style='margin:0; padding:0'><strong>Téléphone :</strong>514 328-4000 P ${feature.properties.Poste}</p>
-	    <p style='margin:0; padding:0'><strong>Cellulaire :</strong> ${feature.properties.Cell} </p>
+            <p style='width:300px; margin:0; padding:0;'><strong>Secteur : </strong>${feature.properties.Secteur}</p>
+            <p style='width:300px; margin:0; padding:0'><strong>Inspecteur :</strong> ${feature.properties.Inspecteur}</p>
+            <p style='width:300px; margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Courriel}</p>
+            <p style='width:300px; margin:0; padding:0'><strong>Téléphone :</strong>514 328-4000 P ${feature.properties.Poste}</p>
+	    <p style='width:300px; margin:0; padding:0'><strong>Cellulaire :</strong> ${feature.properties.Cell} </p>
             `);
     layer.on("mouseover", function () {
       this.setStyle({
