@@ -125,7 +125,7 @@ const C1096_Layer = L.geoJson(C1096, {
       });
     };
 	  
-    if (feature.properties.Plan = "N/A"){
+    if (feature.properties.Plan == "N/A"){
 	 layer.bindPopup(`
            <p style='margin:0; padding:0; color:#4ef54a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
            <p style='margin:0; padding:0'><strong>Plan : </strong> Aucun </p>
@@ -134,7 +134,7 @@ const C1096_Layer = L.geoJson(C1096, {
 	   <p style='margin:0; padding:0'><strong>Fin Travaux : </strong> ${feature.properties.Fin}</p>
          `);
       }
-     if (feature.properties.Plan != "N/A"){
+     if (feature.properties.Plan !== "N/A"){
 	 layer.bindPopup(`
            <p style='margin:0; padding:0; color:#4ef54a; background-color: black; padding:0 5px; border-radius:5px'><strong>Contrat : </strong> ${feature.properties.Contrat}</p>
            <p style='margin:0; padding:0'><strong>Plan : </strong> <a href="./data/1096/1096-${feature.properties.Plan}.pdf" target="_blank">${feature.properties.Plan}</a></p>
