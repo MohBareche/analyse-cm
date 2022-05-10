@@ -304,13 +304,13 @@ const C1106_Layer = L.geoJson(C1106, {
 function getColorInspection(feature) {
   switch (feature) {
     case "1":
-      return "#704709";
+      return "cyan";
     case "2":
       return "red";
     case "3":
-      return "#940043";
+      return "magenta";
     case "4":
-      return "#9004e0";
+      return "yellow";
     case "5":
       return "green";
     case "6":
@@ -332,7 +332,7 @@ const inspectionLayer = L.geoJson(inspection, {
             <p style='width:300px; margin:0; padding:0;'><strong>Secteur : </strong>${feature.properties.Secteur}</p>
             <p style='width:300px; margin:0; padding:0'><strong>Inspecteur :</strong> ${feature.properties.Inspecteur}</p>
             <p style='width:300px; margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Courriel}</p>
-            <p style='width:300px; margin:0; padding:0'><strong>Téléphone :</strong>514 328-4000 P ${feature.properties.Poste}</p>
+            <p style='width:300px; margin:0; padding:0'><strong>Téléphone :</strong>514 328-4000 Poste ${feature.properties.Poste}</p>
 	    <p style='width:300px; margin:0; padding:0'><strong>Cellulaire :</strong> ${feature.properties.Cell} </p>
             `);
     layer.on("mouseover", function () {
