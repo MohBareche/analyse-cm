@@ -331,9 +331,9 @@ const inspectionLayer = L.geoJson(inspection, {
     layer.bindPopup(`
             <p style='margin:0; padding:0;'><strong>Secteur : </strong>${feature.properties.Secteur}</p>
             <p style='margin:0; padding:0'><strong>Inspecteur :</strong> ${feature.properties.Inspecteur}</p>
-            <p style='margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Email}</p>
-            <p style='margin:0; padding:0'><strong>Téléphone :</strong>514 328-4000 P ${feature.properties.poste}</p>
-	    <p style='margin:0; padding:0'><strong>Cellulaire :</strong> ${feature.properties.cell} </p>
+            <p style='margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Courriel}</p>
+            <p style='margin:0; padding:0'><strong>Téléphone :</strong>514 328-4000 P ${feature.properties.Poste}</p>
+	    <p style='margin:0; padding:0'><strong>Cellulaire :</strong> ${feature.properties.Cell} </p>
             `);
     layer.on("mouseover", function () {
       this.setStyle({
