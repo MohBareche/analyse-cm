@@ -331,7 +331,7 @@ const inspectionLayer = L.geoJson(inspection, {
     layer.bindPopup(`
             <p style='width:300px; margin:0; padding:0;'><strong>Secteur : </strong>${feature.properties.Secteur}</p>
             <p style='width:300px; margin:0; padding:0'><strong>Inspecteur :</strong> ${feature.properties.Inspecteur}</p>
-            <p style='width:300px; margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Courriel}</p>
+            <p style='width:300px; margin:0; padding:0'><strong>Courriel :</strong><a href="mailto:${feature.properties.Courriel}"> ${feature.properties.Courriel}</a></p>
             <p style='width:300px; margin:0; padding:0'><strong>Téléphone :</strong>514 328-4000 Poste ${feature.properties.Poste}</p>
 	    <p style='width:300px; margin:0; padding:0'><strong>Cellulaire :</strong> ${feature.properties.Cell} </p>
             `);
