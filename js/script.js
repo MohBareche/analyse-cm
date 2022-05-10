@@ -312,9 +312,9 @@ function getColorInspection(feature) {
     case "4":
       return "yellow";
     case "5":
-      return "green";
+      return "#919151";
     case "6":
-      return "blue";
+      return "#bdabd0";
   }
 }
 function styleInspection(feature) {
