@@ -310,7 +310,7 @@ function getColorInspection(feature) {
     case "3":
       return "magenta";
     case "4":
-      return "yellow";
+      return "#eaadc1";
     case "5":
       return "#919151";
     case "6":
