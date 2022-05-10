@@ -7,7 +7,8 @@ const inspection = {
         "Secteur": 6,
         "Inspecteur": "Charles Ladouceur",
         "Courriel": "charles.ladouceur@montreal.ca",
-        "Téléphone": "(514) 466-6086"
+        "Poste": "4016",
+        "Cell": "514-466-6086"
       },
       "geometry": {
         "type": "Polygon",
@@ -102,7 +103,8 @@ const inspection = {
         "Secteur": 5,
         "Inspecteur": "Youcef Zerourou",
         "Courriel": "youcef.zerourou@montreal.ca",
-        "Téléphone": "(438) 838-3135"
+        "Poste": "4189",
+        "Cell":"(514) 466-6940"
       },
       "geometry": {
         "type": "Polygon",
