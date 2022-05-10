@@ -267,7 +267,7 @@ const inspection = {
       }
     },
     {
-            type: "Feature",
+       "type": "Feature",
        "properties": {
         "Secteur": "4",
         "Inspecteur": "Karim Ouarab",
@@ -275,9 +275,9 @@ const inspection = {
         "Poste": "4171",
         "Cell":"(438) 985-2139"
       },
-            geometry: {
-                type: "Polygon",
-                coordinates: [
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
                     [
 
                         [-73.620202, 45.595165],
@@ -386,7 +386,7 @@ const inspection = {
                         [-73.620202, 45.595165]
                     ]
                 ]
-            },
-        };
+            }
+        }
   ]
 }
