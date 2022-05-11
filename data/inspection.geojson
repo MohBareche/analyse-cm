@@ -388,7 +388,7 @@ const inspection = {
                 ]
             }
         },
-    "type": "Feature",
+    {"type": "Feature",
            "properties": {
         "Secteur": "3",
         "Inspecteur": "Newfel Yedjour",
