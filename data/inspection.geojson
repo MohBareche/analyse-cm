@@ -389,7 +389,7 @@ const inspection = {
             }
         },
     {"type": "Feature",
-           "properties": {
+        "properties": {
         "Secteur": "3",
         "Inspecteur": "Newfel Yedjour",
         "Courriel": "newfel.yedjour@montreal.ca",
@@ -649,7 +649,7 @@ const inspection = {
               45.6035561 
             ]     
                     ]
-                
+                ]
             }
                   }
   ]
