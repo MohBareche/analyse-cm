@@ -322,7 +322,7 @@ function styleInspection(feature) {
     color: getColorInspection(feature.properties.Secteur),
     fillColor: getColorInspection(feature.properties.Secteur),
     opacity: 1,
-    fillOpacity: 0.4,
+    fillOpacity: 0.6,
   };
 }
 const inspectionLayer = L.geoJson(inspection, {
@@ -337,13 +337,13 @@ const inspectionLayer = L.geoJson(inspection, {
             `);
     layer.on("mouseover", function () {
       this.setStyle({
-        fillOpacity: 0.2,
+        fillOpacity: 0.4,
         opacity: 1,
       });
     });
     layer.on("mouseout", function () {
       this.setStyle({
-        fillOpacity: 0.4,
+        fillOpacity: 0.5,
         opacity: 1,
       });
     });
