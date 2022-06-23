@@ -109,6 +109,12 @@ const dosDaneIcon1106 = L.icon({
   iconAnchor: [15, 15],
 });
 
+const dosDaneIcon1106_Ok = L.icon({
+  iconUrl: "../img/speed_bump_1106_OK.svg",
+  iconSize: [30, 30],
+  iconAnchor: [15, 15],
+});
+
 //   C1096
 const C1096_Layer = L.geoJson(C1096, {
   pointToLayer: function (feature, latlng) {
