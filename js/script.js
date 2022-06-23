@@ -281,6 +281,10 @@ const C1106_Layer = L.geoJson(C1106, {
 						<th>Fin travaux</th>
 						<td>${feature.properties.Fin}</td>
 					</tr>
+					<tr>
+						<th>Status</th>
+						<th>${feature.properties.Status}</th>
+					<tr>
 				</table>
 				<br>
 				<table class="table2">
