@@ -257,8 +257,8 @@ const C1108_Layer = L.geoJson(C1108, {
 //   C1106
 const C1106_Layer = L.geoJson(C1106, {
   pointToLayer: function (feature, latlng) {
-          if (feature.properties.status === "OK" return L.marker(latlng, {icon: dosDaneIcon1106_OK});
-	  if (feature.properties.status === "Non" return L.marker(latlng, {icon: dosDaneIcon1106});
+          if (feature.properties.status === "Ok") return L.marker(latlng, {icon: dosDaneIcon1106_Ok});
+	  if (feature.properties.status === "Non") return L.marker(latlng, {icon: dosDaneIcon1106});
   },
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
