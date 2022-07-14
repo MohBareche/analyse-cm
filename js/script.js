@@ -741,23 +741,23 @@ const baseMaps = {
 };
 
 const overlayMaps = {
-  "Contrat 1093":C1093_Layer,
-  "Contrat 1096":C1096_Layer,
-  "Contrat 1104":C1104_Layer,
-  "Contrat 1105":C1105_Layer,
-  "Contrat 1106":C1106_Layer,
-  "Contrat 1108":C1108_Layer,
-  "Inspecteurs": inspectionLayer,	
-  Arrondissement: arrondissementsLayer,
+//   "Contrat 1093":C1093_Layer,
+//   "Contrat 1096":C1096_Layer,
+//   "Contrat 1104":C1104_Layer,
+//   "Contrat 1105":C1105_Layer,
+//   "Contrat 1106":C1106_Layer,
+//   "Contrat 1108":C1108_Layer,
+//   "Inspecteurs": inspectionLayer,	
+//   Arrondissement: arrondissementsLayer,
 //   "Axes mobilité sans trav.": axeMobLayer,
 //   "Axes sensibles avec trav.": axeSensibleLayer,
 //   Patrimoine: patrimoineLayer,
 //   "Ruelles vertes": ruellesVertesLayer,
-  Casernes: casernesMarkers,
+//   Casernes: casernesMarkers,
 //   "Secteurs AGIR": secteursAgirLayer,
 //   Inspecteurs: inspecteursLayer,
 //   Horticulteurs: horticulteursLayer,
-  "Google Street View": markerGSV,
+//   "Google Street View": markerGSV,
 };
 
 // L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
@@ -799,17 +799,12 @@ var overlaysTree = {
             label: 'Autres',
             selectAllCheckbox: true,
             children: [
-                {
-                    label: 'Jordan',
-                    selectAllCheckbox: true,
-                    children: [
-                        { label: 'Petra', layer: L.marker([30.3292215, 35.4432464]) },
-                        { label: 'Wadi Rum', layer: L.marker([29.6233486, 35.4390656]) }
+                        { label: "Secteurs d'inspection", layer: inspectionLayer },
+                        { label: 'Arrondissements', layer: arrondissementsLayer },
+		        { label: 'Casernes pompiers', layer: casernesMarkers },
+		        { label: 'Google Street View', layer: markerGSV }
                     ]
-                }
-            ]
         }
-    ]
 }
 
 L.control.layers.tree(baseTree, overlaysTree).addTo(map);
