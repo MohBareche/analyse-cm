@@ -815,7 +815,6 @@ L.control.layers.tree(baseTree, overlaysTree, {
                 openedSymbol: '&#8863; &#x1f5c1;',
                 collapseAll: 'Réduire tout',
                 expandAll: 'Développer tout',
-                collapseTree: true,
 		collapsed: false
             }).addTo(map);
 
