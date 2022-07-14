@@ -816,7 +816,7 @@ L.control.layers.tree(baseTree, overlaysTree, {
                 collapseAll: 'Réduire tout',
                 expandAll: 'Développer tout',
 		collapsed: false
-            }).addTo(map);
+            }).addTo(map).collapseTree(false);
 
 L.control.locate(
 {
