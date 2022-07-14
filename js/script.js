@@ -729,17 +729,18 @@ map.on("move", function () {
 
 //  Control Groups et overlays
 const baseMaps = {
-  "Mapbox Light": Light,
-  "Mapbox Streets": Streets,
+//   "Mapbox Light": Light,
+//   "Mapbox Streets": Streets,
 //   "Mapbox Outdoors": Outdoors,
 //   "Mapbox Satellite": Satellite,
-  "Google Streets": googleStreets,
-  "Google Satellite": googleSat,
+//   "Google Streets": googleStreets,
+//   "Google Satellite": googleSat,
 //   "Google Hybrid": googleHybrid,
 //   "Google Terrain": googleTerrain ,
-  "ISRI Streets": esriTile,
-  "Open Street Map": osm,
+//   "ISRI Streets": esriTile,
+//   "Open Street Map": osm,
 };
+
 const overlayMaps = {
   "Contrat 1093":C1093_Layer,
   "Contrat 1096":C1096_Layer,
@@ -751,8 +752,8 @@ const overlayMaps = {
   Arrondissement: arrondissementsLayer,
 //   "Axes mobilité sans trav.": axeMobLayer,
 //   "Axes sensibles avec trav.": axeSensibleLayer,
-  Patrimoine: patrimoineLayer,
-  "Ruelles vertes": ruellesVertesLayer,
+//   Patrimoine: patrimoineLayer,
+//   "Ruelles vertes": ruellesVertesLayer,
   Casernes: casernesMarkers,
 //   "Secteurs AGIR": secteursAgirLayer,
 //   Inspecteurs: inspecteursLayer,
@@ -760,7 +761,72 @@ const overlayMaps = {
   "Google Street View": markerGSV,
 };
 
-L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
+// L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
+
+const baseTree = {
+    label: 'Couches de base',
+    children: [
+            { label: 'Mapbox Light', layer: Light },
+            { label: 'Mapbox Streets', layer: Streets },
+            { label: 'Google Streets', layer: googleStreets },
+	    { label: 'Google Satellite', layer: googleSat },
+	    { label: 'ISRI Streets', layer: esriTile },
+	    { label: 'Open Street Map', layer: osm }
+    ]
+};
+
+var overlaysTree = {
+    label: 'Points of Interest',
+    selectAllCheckbox: 'Un/select all',
+    children: [
+        {
+            label: 'Europe',
+            selectAllCheckbox: true,
+            children: [
+                {
+                    label: 'France',
+                    selectAllCheckbox: true,
+                    children: [
+                        { label: 'Tour Eiffel', layer: L.marker([48.8582441, 2.2944775]) },
+                        { label: 'Notre Dame', layer: L.marker([48.8529540, 2.3498726]) },
+                        { label: 'Louvre', layer: L.marker([48.8605847, 2.3376267]) },
+                    ]
+                }, {
+                    label: 'Germany',
+                    selectAllCheckbox: true,
+                    children: [
+                        { label: 'Branderburger Tor', layer: L.marker([52.5162542, 13.3776805])},
+                        { label: 'Kölner Dom', layer: L.marker([50.9413240, 6.9581201])},
+                    ]
+                }, {label: 'Spain',
+                    selectAllCheckbox: 'De/seleccionar todo',
+                    children: [
+                        { label: 'Palacio Real', layer: L.marker([40.4184145, -3.7137051])},
+                        { label: 'La Alhambra', layer: L.marker([37.1767829, -3.5892795])},
+                    ]
+                }
+            ]
+        }, {
+            label: 'Asia',
+            selectAllCheckbox: true,
+            children: [
+                {
+                    label: 'Jordan',
+                    selectAllCheckbox: true,
+                    children: [
+                        { label: 'Petra', layer: L.marker([30.3292215, 35.4432464]) },
+                        { label: 'Wadi Rum', layer: L.marker([29.6233486, 35.4390656]) }
+                    ]
+                }, {
+                /* ... */
+                }
+            ]
+        }
+    ]
+}
+
+L.control.layers.tree(baseTree, overlaysTree).addTo(map);
+
 L.control.locate(
 {
     flyTo:true,
