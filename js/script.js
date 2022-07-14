@@ -808,7 +808,15 @@ var overlaysTree = {
     ]
 }
 
-L.control.layers.tree(baseTree, overlaysTree).addTo(map);
+L.control.layers.tree(baseTree, overlaysTree, {
+                namedToggle: true,
+                selectorBack: false,
+                closedSymbol: '&#8862; &#x1f5c0;',
+                openedSymbol: '&#8863; &#x1f5c1;',
+                collapseAll: 'Réduire tout',
+                expandAll: 'Développer tout',
+                collapsed: false,
+            }).addTo(map);
 
 L.control.locate(
 {
