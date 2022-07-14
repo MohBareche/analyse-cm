@@ -818,7 +818,7 @@ const lay = L.control.layers.tree(baseTree, overlaysTree, {
 		collapsed: false
             });
 
-lay.addTo(map).collapseTree().expandSelected().collapseTree(true);
+lay.addTo(map).collapseTree(true).expandSelected().collapseTree(true);
 L.control.locate(
 {
     flyTo:true,
