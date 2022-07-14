@@ -805,6 +805,7 @@ var overlaysTree = {
 		        { label: 'Google Street View', layer: markerGSV }
                     ]
         }
+    ]
 }
 
 L.control.layers.tree(baseTree, overlaysTree).addTo(map);
