@@ -808,7 +808,7 @@ var overlaysTree = {
     ]
 }
 
-L.control.layers.tree(baseTree, overlaysTree, {
+const lay = L.control.layers.tree(baseTree, overlaysTree, {
                 namedToggle: true,
 		selectorBack: false,
                 closedSymbol: '&#8862; &#x1f5c0;',
@@ -816,8 +816,9 @@ L.control.layers.tree(baseTree, overlaysTree, {
                 collapseAll: 'Réduire tout',
                 expandAll: 'Développer tout',
 		collapsed: false
-            }).addTo(map).collapseTree(true);
+            });
 
+lay.addTo(map).collapseTree().expandSelected().collapseTree(true);
 L.control.locate(
 {
     flyTo:true,
