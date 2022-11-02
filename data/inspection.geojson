@@ -5,7 +5,7 @@ const inspection = {
        "type": "Feature",
        "properties": {
         "Secteur": "1",
-        "Inspecteur": "",
+        "Inspecteur": "Gabriel",
         "Courriel": "",
         "Poste": "",
         "Cell":""
@@ -152,7 +152,7 @@ const inspection = {
        "type": "Feature",
        "properties": {
         "Secteur": "2",
-        "Inspecteur": "",
+        "Inspecteur": "Amar",
         "Courriel": "",
         "Poste": "",
         "Cell":""
