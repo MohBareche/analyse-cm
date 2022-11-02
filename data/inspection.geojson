@@ -5,10 +5,10 @@ const inspection = {
        "type": "Feature",
        "properties": {
         "Secteur": "1",
-        "Inspecteur": "Gabriel",
-        "Courriel": "",
-        "Poste": "",
-        "Cell":""
+        "Inspecteur": "Gabriel Laviolette",
+        "Courriel": "gabriel.laviolette@montreal.ca",
+        "Poste": "4075",
+        "Cell":"(514) 924-6876"
       },
             "geometry": {
                 "type": "Polygon",
@@ -152,10 +152,10 @@ const inspection = {
        "type": "Feature",
        "properties": {
         "Secteur": "2",
-        "Inspecteur": "Amar",
-        "Courriel": "",
-        "Poste": "",
-        "Cell":""
+        "Inspecteur": "Amar Bounif",
+        "Courriel": "amar.bounif@montreal.ca",
+        "Poste": "4014",
+        "Cell":"(514) 863-9194"
       },
             "geometry": {
                 "type": "Polygon",
@@ -293,7 +293,7 @@ const inspection = {
         "Inspecteur": "Charles Ladouceur",
         "Courriel": "charles.ladouceur@montreal.ca",
         "Poste": "4016",
-        "Cell": "514-466-6086"
+        "Cell": "(514) 466-6086"
       },
       "geometry": {
         "type": "Polygon",
