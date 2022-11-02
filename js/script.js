@@ -361,7 +361,55 @@ const inspectionLayer = L.geoJson(inspection, {
 });
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Secteurs Collectes
 
+function getColorCollectes(feature) {
+  switch (feature) {
+    case "1":
+      return "#704709";
+    case "2":
+      return "#0B7A75";
+    case "3":
+      return "#940043";
+    case "4":
+      return "#9004e0";
+  }
+}
+function styleCollectes(feature) {
+  return {
+    color: getColorCollectes(feature.properties.Secteur),
+    fillColor: getColorCollectes(feature.properties.Secteur),
+    opacity: 1,
+    fillOpacity: 0.4,
+  };
+}
+const collectesLayer = L.geoJson(collectes, {
+  style: styleCollectes,
+  onEachFeature: function (feature, layer) {
+    layer.bindPopup(`
+            <p style='margin:0; padding:0;'><strong>Arrond. : </strong>${feature.properties.name}</p>
+            <p style='margin:0; padding:0;'><strong>Secteur : </strong>${feature.properties.Secteur}</p>
+            <p style='margin:0; padding:0'><strong>Inspecteur :</strong> ${feature.properties.Inspecteur}</p>
+            <p style='margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Email}</p>
+            <p style='margin:0; padding:0'><strong>Téléphone :</strong> ${feature.properties.Téléph}</p>
+            `);
+    layer.on("mouseover", function () {
+      this.setStyle({
+        fillOpacity: 0.2,
+        opacity: 1,
+      });
+    });
+    layer.on("mouseout", function () {
+      this.setStyle({
+        fillOpacity: 0.4,
+        opacity: 1,
+      });
+    });
+  },
+});
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //   Ruelles vertes
 const ruellesVertesLayer = L.geoJson(ruelles_vertes, {
   onEachFeature: function (feature, layer) {
@@ -802,6 +850,7 @@ var overlaysTree = {
                         { label: "Secteurs d'inspection", layer: inspectionLayer },
                         { label: 'Arrondissements', layer: arrondissementsLayer },
 		        { label: 'Casernes pompiers', layer: casernesMarkers },
+		    	{ label: 'Secteurs des Collectes', layer: collectesLayer },
 		        { label: 'Google Street View', layer: markerGSV }
                     ]
         }
