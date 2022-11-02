@@ -6,11 +6,11 @@ let collectes = {
       "properties": {
         "Secteur": 1,
         "Recyclage": "Jeudi",
-        "Ordures ménagères": "",
-        "Résidus alimentaires": "",
+        "OrduresMenageres": "",
+        "ResidusAlimentaires": "",
         "Encombrants": "Vendredi",
-        "Résidus verts": "Vendredi",
-        "9 Logements +": "Mardi"
+        "ResidusVerts": "Vendredi",
+        "NeufLogements": "Mardi"
       },
       "geometry": {
         "type": "Polygon",
@@ -179,11 +179,11 @@ let collectes = {
       "properties": {
         "Secteur": 2,
         "Recyclage": "Lundi",
-        "Ordures ménagères": "",
-        "Résidus alimentaires": "",
+        "OrduresMenageres": "",
+        "ResidusAlimentaires": "",
         "Encombrants": "Vendredi",
-        "Résidus verts": "Vendredi",
-        "9 Logements +": ""
+        "ResidusVerts": "Vendredi",
+        "NeufLogements": ""
       },
       "geometry": {
         "type": "Polygon",
@@ -326,11 +326,11 @@ let collectes = {
       "properties": {
         "Secteur": 3,
         "Recyclage": "Mardi",
-        "Ordures ménagères": "",
-        "Résidus alimentaires": "",
+        "OrduresMenageres": "",
+        "ResidusAlimentaires": "",
         "Encombrants": "Vendredi",
-        "Résidus verts": "Vendredi",
-        "9 Logements +": ""
+        "ResidusVerts": "Vendredi",
+        "NeufLogements": ""
       },
       "geometry": {
         "type": "Polygon",
@@ -406,11 +406,11 @@ let collectes = {
       "properties": {
         "Secteur": 4,
         "Recyclage": "Mercredi",
-        "Ordures ménagères": "Jeudi",
-        "Résidus alimentaires": "Mardi",
+        "OrduresMenageres": "Jeudi",
+        "ResidusAlimentaires": "Mardi",
         "Encombrants": "Vendredi",
-        "Résidus verts": "Vendredi",
-        "9 Logements +": ""
+        "ResidusVerts": "Vendredi",
+        "NeufLogements": ""
       },
       "geometry": {
         "type": "Polygon",
