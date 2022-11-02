@@ -6,10 +6,10 @@ let collectes = {
       "properties": {
         "Secteur": 1,
         "Recyclage": "Jeudi",
-        "OrduresMenageres": "",
-        "ResidusAlimentaires": "",
+        "OrduresMenageres": "Lundi",
+        "ResidusAlimentaires": "Mercredi",
         "Encombrants": "Vendredi",
-        "ResidusVerts": "Vendredi",
+        "ResidusVerts": "Lundi",
         "NeufLogements": "Mardi"
       },
       "geometry": {
@@ -179,10 +179,10 @@ let collectes = {
       "properties": {
         "Secteur": 2,
         "Recyclage": "Lundi",
-        "OrduresMenageres": "",
-        "ResidusAlimentaires": "",
+        "OrduresMenageres": "Mardi",
+        "ResidusAlimentaires": "Jeudi",
         "Encombrants": "Vendredi",
-        "ResidusVerts": "Vendredi",
+        "ResidusVerts": "Mardi",
         "NeufLogements": ""
       },
       "geometry": {
@@ -326,10 +326,10 @@ let collectes = {
       "properties": {
         "Secteur": 3,
         "Recyclage": "Mardi",
-        "OrduresMenageres": "",
-        "ResidusAlimentaires": "",
+        "OrduresMenageres": "Mercredi",
+        "ResidusAlimentaires": "Lundi",
         "Encombrants": "Vendredi",
-        "ResidusVerts": "Vendredi",
+        "ResidusVerts": "Mercredi",
         "NeufLogements": ""
       },
       "geometry": {
@@ -409,7 +409,7 @@ let collectes = {
         "OrduresMenageres": "Jeudi",
         "ResidusAlimentaires": "Mardi",
         "Encombrants": "Vendredi",
-        "ResidusVerts": "Vendredi",
+        "ResidusVerts": "Jeudi",
         "NeufLogements": ""
       },
       "geometry": {
