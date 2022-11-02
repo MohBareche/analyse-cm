@@ -314,9 +314,9 @@ const C1106_Layer = L.geoJson(C1106, {
 function getColorInspection(feature) {
   switch (feature) {
     case "1":
-      return "#c6d1d3";
+      return "#BCFFF7";
     case "2":
-      return "#c6d1d3";
+      return "#FFBCFE";
     case "3":
       return "#adeab8";
     case "4":
