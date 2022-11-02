@@ -365,13 +365,13 @@ const inspectionLayer = L.geoJson(inspection, {
 
 function getColorCollectes(feature) {
   switch (feature) {
-    case "1":
+    case 1:
       return "#704709";
-    case "2":
+    case 2:
       return "#0B7A75";
-    case "3":
+    case 3:
       return "#940043";
-    case "4":
+    case 4:
       return "#9004e0";
   }
 }
@@ -387,11 +387,13 @@ const collectesLayer = L.geoJson(collectes, {
   style: styleCollectes,
   onEachFeature: function (feature, layer) {
     layer.bindPopup(`
-            <p style='margin:0; padding:0;'><strong>Arrond. : </strong>${feature.properties.name}</p>
             <p style='margin:0; padding:0;'><strong>Secteur : </strong>${feature.properties.Secteur}</p>
-            <p style='margin:0; padding:0'><strong>Inspecteur :</strong> ${feature.properties.Inspecteur}</p>
-            <p style='margin:0; padding:0'><strong>Courriel :</strong> ${feature.properties.Email}</p>
-            <p style='margin:0; padding:0'><strong>Téléphone :</strong> ${feature.properties.Téléph}</p>
+            <p style='margin:0; padding:0'><strong>Recyclage :</strong> ${feature.properties.Recyclage}</p>
+            <p style='margin:0; padding:0'><strong>Ordures ménagères :</strong> ${feature.properties.OrduresMenageres}</p>
+            <p style='margin:0; padding:0'><strong>Résidus alimentaires :</strong> ${feature.properties.ResidusAlimentaires}</p>
+	    <p style='margin:0; padding:0'><strong>Encombrants :</strong> ${feature.properties.Encombrants}</p>
+	    <p style='margin:0; padding:0'><strong>Résidus verts :</strong> ${feature.properties.ResidusVerts}</p>
+	    <p style='margin:0; padding:0'><strong>9 Logements + :</strong> ${feature.properties.NeufLogements}</p>
             `);
     layer.on("mouseover", function () {
       this.setStyle({
