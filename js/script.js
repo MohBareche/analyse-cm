@@ -322,7 +322,7 @@ function getColorInspection(feature) {
     case "4":
       return "#eaadc1";
     case "5":
-      return "#919151";
+      return "#e7e9e8";
     case "6":
       return "#b09bc7";
   }
