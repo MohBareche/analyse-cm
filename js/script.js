@@ -733,9 +733,9 @@ const secteursAgirLayer = L.geoJson(secteurs_agir, {
   },
 });
 
-//    Casernes
-const markers = L.markerClusterGroup();
-const geoJsonLayer = L.geoJson(casernes, {
+//  Casernes
+const markersCasernes = L.markerClusterGroup();
+const geoJsonLayerCasernes = L.geoJson(casernes, {
   onEachFeature: function (feature, layer) {
     if (feature.properties.ARRONDISSEMENT !== null) {
       layer.bindPopup(`
@@ -759,13 +759,13 @@ const geoJsonLayer = L.geoJson(casernes, {
     });
   },
 });
-const casernesMarkers = markers.addLayer(geoJsonLayer);
-map.fitBounds(markers.getBounds());
+const casernesMarkers = markersCasernes.addLayer(geoJsonLayer);
+map.fitBounds(markersCasernes.getBounds());
 
 
 //    Bornes de recharges
 // BR_15_11_2022
-// const markers = L.markerClusterGroup();
+// const markersBR = L.markerClusterGroup();
 const geoJsonLayerBR = L.geoJson(BR_15_11_2022, {
   onEachFeature: function (feature, layer) {
 //     if (feature.properties.ARRONDISSEMENT !== null) {
@@ -790,7 +790,7 @@ const geoJsonLayerBR = L.geoJson(BR_15_11_2022, {
 //     });
   },
 });
-const BRMarkers = markers.addLayer(geoJsonLayerBR);
+const BRMarkers = markersBR.addLayer(geoJsonLayerBR);
 map.fitBounds(markers.getBounds());
 
 /*  ********************************** */
