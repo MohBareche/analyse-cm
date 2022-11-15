@@ -791,7 +791,7 @@ const geoJsonLayerBR = L.geoJson(BR_15_11_2022, {
   },
 });
 const BRMarkers = markersBR.addLayer(geoJsonLayerBR);
-map.fitBounds(markers.getBounds());
+map.fitBounds(markersBR.getBounds());
 
 /*  ********************************** */
 
