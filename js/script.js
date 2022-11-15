@@ -759,7 +759,7 @@ const geoJsonLayerCasernes = L.geoJson(casernes, {
     });
   },
 });
-const casernesMarkers = markersCasernes.addLayer(geoJsonLayer);
+const casernesMarkers = markersCasernes.addLayer(geoJsonLayerCasernes);
 map.fitBounds(markersCasernes.getBounds());
 
 
