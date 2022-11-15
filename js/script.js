@@ -765,7 +765,7 @@ map.fitBounds(markersCasernes.getBounds());
 
 //    Bornes de recharges
 // BR_15_11_2022
-// const markersBR = L.markerClusterGroup();
+const markersBR = L.markerClusterGroup();
 const geoJsonLayerBR = L.geoJson(BR_15_11_2022, {
   onEachFeature: function (feature, layer) {
 //     if (feature.properties.ARRONDISSEMENT !== null) {
