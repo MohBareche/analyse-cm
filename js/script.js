@@ -768,26 +768,26 @@ map.fitBounds(markers.getBounds());
 // const markers = L.markerClusterGroup();
 const geoJsonLayerBR = L.geoJson(BR_15_11_2022, {
   onEachFeature: function (feature, layer) {
-    if (feature.properties.ARRONDISSEMENT !== null) {
-      layer.bindPopup(`
-            <div>
-              <p style='margin:0; padding:0'><strong>Caserne :</strong> ${feature.properties.CASERNE}</p>
-              <p style='margin:0; padding:0'><strong>Arrond.:</strong> ${feature.properties.ARRONDISSEMENT}</p>
-            </div>
-            `);
-    } else {
-      layer.bindPopup(`
-      <div>
-        <p><strong>Caserne :</strong> ${feature.properties.CASERNE}</p>
-        <p><strong>Ville: </strong> ${feature.properties.VILLE}</p>
-      </div>`);
-    }
-    layer.on("mouseover", function () {
-      this.openPopup();
-    });
-    layer.on("mouseout", function () {
-      this.closePopup();
-    });
+//     if (feature.properties.ARRONDISSEMENT !== null) {
+//       layer.bindPopup(`
+//             <div>
+//               <p style='margin:0; padding:0'><strong>Caserne :</strong> ${feature.properties.CASERNE}</p>
+//               <p style='margin:0; padding:0'><strong>Arrond.:</strong> ${feature.properties.ARRONDISSEMENT}</p>
+//             </div>
+//             `);
+//     } else {
+//       layer.bindPopup(`
+//       <div>
+//         <p><strong>Caserne :</strong> ${feature.properties.CASERNE}</p>
+//         <p><strong>Ville: </strong> ${feature.properties.VILLE}</p>
+//       </div>`);
+//     }
+//     layer.on("mouseover", function () {
+//       this.openPopup();
+//     });
+//     layer.on("mouseout", function () {
+//       this.closePopup();
+//     });
   },
 });
 const BRMarkers = markers.addLayer(geoJsonLayerBR);
