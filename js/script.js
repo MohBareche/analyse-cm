@@ -986,4 +986,3 @@ searchControl.on("results", function (data) {
 
 // Échelle à droite en bas
 L.control.scale({ position: "bottomright" }).addTo(map);
-
