@@ -967,7 +967,6 @@ map.on("draw:created", function (e) {
   drawnItems.addLayer(layer);
 });
 
-
 let arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider({ countries: "CA" });
 const searchControl = L.esri.Geocoding.geosearch({
   // collapseAfterResult: false,
