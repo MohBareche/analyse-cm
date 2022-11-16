@@ -808,17 +808,48 @@ map.fitBounds(markersBR.getBounds());
 /* ***************************************************************************************************************************************************** */
 
 //   RAAV 15/11/2022
-const raavLayer = L.geoJson(RAAV, {
+//   RAAV VS LOCAL
+function getColorRAAV(feature) {
+  switch (feature) {
+    case 1:
+      return "blue";
+    case 0:
+      return "cyan";
+  }
+}
+
+function styleRAAV(feature) {
+  return {
+    color: getColorRAAV(feature.properties.ATI_GEOMATIQUE.TRC_TOP_RAAV.ARTERE),
+    fillColor: getColorRAAV(feature.properties.ATI_GEOMATIQUE.TRC_TOP_RAAV.ARTERE),
+    opacity: 1,
+    fillOpacity: 0.4,
+  };
+}
+
+const raavLayer = L.geoJson(RAAV, 
+  style: styleRAAV,
   onEachFeature: function (feature, layer) {
-    layer.setStyle({ color: "blue" });
-    layer.bindPopup(`
-            <p style='margin:0; padding:0;'><strong>RAAV au 15-11-2022</strong></p>
+    if (feature.properties.ATI_GEOMATIQUE.TRC_TOP_RAAV.ARTERE == 1) {
+      layer.bindPopup(`
+            <p style='margin:0; padding:0;'><strong>Type : </strong>RAAV</p>
             `);
+    } else {
+      layer.bindPopup(`
+        <p style='margin:0; padding:0;'><strong>Type : </strong>Local</p>
+      `);
+    }
     layer.on("mouseover", function () {
-      this.openPopup();
+      this.setStyle({
+        fillOpacity: 0.2,
+        opacity: 1,
+      });
     });
     layer.on("mouseout", function () {
-      this.closePopup();
+      this.setStyle({
+        fillOpacity: 0.4,
+        opacity: 1,
+      });
     });
   },
 });
