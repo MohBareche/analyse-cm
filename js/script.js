@@ -804,8 +804,9 @@ const geoJsonLayerBR = L.geoJson(BR, {
      layer.on("mouseout", function () {
        this.closePopup();
      });
-  }
+  };
 });
+
 const BRMarkers = markersBR.addLayer(geoJsonLayerBR);
 map.fitBounds(markersBR.getBounds());
 
