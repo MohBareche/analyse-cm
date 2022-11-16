@@ -115,6 +115,7 @@ const dosDaneIcon1106_Ok = L.icon({
   iconAnchor: [15, 15],
 });
 
+/* ***************************************************************************************************************************************************** */
 //   C1096
 const C1096_Layer = L.geoJson(C1096, {
   pointToLayer: function (feature, latlng) {
@@ -167,7 +168,7 @@ const C1096_Layer = L.geoJson(C1096, {
   }
 });
 
-
+/* ***************************************************************************************************************************************************** */
 //   C1093
 const C1093_Layer = L.geoJson(C1093, {
   pointToLayer: function (feature, latlng) {
@@ -187,6 +188,7 @@ const C1093_Layer = L.geoJson(C1093, {
   },
 });
 
+/* ***************************************************************************************************************************************************** */
 //   C1104
 const C1104_Layer = L.geoJson(C1104, {
   pointToLayer: function (feature, latlng) {
@@ -209,6 +211,7 @@ const C1104_Layer = L.geoJson(C1104, {
   },
 });
 
+/* ***************************************************************************************************************************************************** */
 //   C1105
 const C1105_Layer = L.geoJson(C1105, {
   pointToLayer: function (feature, latlng) {
@@ -228,6 +231,7 @@ const C1105_Layer = L.geoJson(C1105, {
   },
 });
 
+/* ***************************************************************************************************************************************************** */
 //   C1108
 const C1108_Layer = L.geoJson(C1108, {
   pointToLayer: function (feature, latlng) {
@@ -253,7 +257,7 @@ const C1108_Layer = L.geoJson(C1108, {
   },
 });
 
-
+/* ***************************************************************************************************************************************************** */
 //   C1106
 const C1106_Layer = L.geoJson(C1106, {
   pointToLayer: function (feature, latlng) {
@@ -308,7 +312,7 @@ const C1106_Layer = L.geoJson(C1106, {
   }
 });
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* ***************************************************************************************************************************************************** */
 
 //   Inspecteurs cadre bati
 function getColorInspection(feature) {
@@ -360,7 +364,7 @@ const inspectionLayer = L.geoJson(inspection, {
   },
 });
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* ***************************************************************************************************************************************************** */
 // Secteurs Collectes
 
 function getColorCollectes(feature) {
@@ -411,7 +415,7 @@ const collectesLayer = L.geoJson(collectes, {
 });
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* ***************************************************************************************************************************************************** */
 //   Ruelles vertes
 const ruellesVertesLayer = L.geoJson(ruelles_vertes, {
   onEachFeature: function (feature, layer) {
@@ -428,6 +432,7 @@ const ruellesVertesLayer = L.geoJson(ruelles_vertes, {
   },
 });
 
+/* ***************************************************************************************************************************************************** */
 //   Axe_mob2021
 const axeMobLayer = L.geoJson(axe_mob2021, {
   onEachFeature: function (feature, layer) {
@@ -444,6 +449,7 @@ const axeMobLayer = L.geoJson(axe_mob2021, {
   },
 });
 
+/* ***************************************************************************************************************************************************** */
 //   Axe_sensible2021
 const axeSensibleLayer = L.geoJson(axe_sensible2021, {
   onEachFeature: function (feature, layer) {
@@ -460,6 +466,7 @@ const axeSensibleLayer = L.geoJson(axe_sensible2021, {
   },
 });
 
+/* ***************************************************************************************************************************************************** */
 //   Patrimoine
 const patrimoineLayer = L.geoJson(patrimoine, {
   onEachFeature: function (feature, layer) {
@@ -493,6 +500,7 @@ const patrimoineLayer = L.geoJson(patrimoine, {
   },
 });
 
+/* ***************************************************************************************************************************************************** */
 //   Arrondissements
 function getColorArrondissements(feature) {
   switch (feature) {
@@ -567,6 +575,7 @@ const arrondissementsLayer = L.geoJson(arrondissements, {
   },
 });
 
+/* ***************************************************************************************************************************************************** */
 //   Inspecteurs
 function getColorInspecteurs(feature) {
   switch (feature) {
@@ -621,6 +630,7 @@ const inspecteursLayer = L.geoJson(arrondissements, {
   },
 });
 
+/* ***************************************************************************************************************************************************** */
 //   Horticulteurs
 function getColorHorticulteurs(feature) {
   switch (feature) {
@@ -687,6 +697,7 @@ const horticulteursLayer = L.geoJson(arrondissements, {
   },
 });
 
+/* ***************************************************************************************************************************************************** */
 //    Secteurs AGIR
 function getColorSecteurs(feature) {
   switch (feature) {
@@ -733,6 +744,7 @@ const secteursAgirLayer = L.geoJson(secteurs_agir, {
   },
 });
 
+/* ***************************************************************************************************************************************************** */
 //  Casernes
 const markersCasernes = L.markerClusterGroup();
 const geoJsonLayerCasernes = L.geoJson(casernes, {
@@ -762,7 +774,7 @@ const geoJsonLayerCasernes = L.geoJson(casernes, {
 const casernesMarkers = markersCasernes.addLayer(geoJsonLayerCasernes);
 map.fitBounds(markersCasernes.getBounds());
 
-
+/* ***************************************************************************************************************************************************** */
 //    Bornes de recharges
 // BR_15_11_2022
 const markersBR = L.markerClusterGroup();
@@ -793,7 +805,7 @@ const geoJsonLayerBR = L.geoJson(BR_15_11_2022, {
 const BRMarkers = markersBR.addLayer(geoJsonLayerBR);
 map.fitBounds(markersBR.getBounds());
 
-/*  ********************************** */
+/* ***************************************************************************************************************************************************** */
 
 // listen for the results event and add every result to the map
 const pegmanIcon = L.icon({
@@ -924,48 +936,48 @@ map.addControl(
 L.streetView({ position: "topright" }).addTo(map);
 
 // Draw Tools
-const drawnItems = new L.FeatureGroup();
-map.addLayer(drawnItems);
+// const drawnItems = new L.FeatureGroup();
+// map.addLayer(drawnItems);
 
-const drawControl = new L.Control.Draw({
-  // position: "topright",
-  draw: {
-    polygon: {
-      shapeOptions: {
-        color: "#490066",
-      },
-      allowIntersection: false,
-      drawError: {
-        color: "orange",
-        timeout: 2000,
-      },
-      showArea: true,
-      metric: true,
-      repeatMode: true,
-    },
-    polyline: {
-      shapeOptions: {
-        color: "#490066",
-      },
-      showArea: true,
-      metric: true,
-      repeatMode: true,
-    },
-    rectangle: false,
-    circlemarker: false,
-    marker: true,
-    circle: false,
-  },
-  edit: {
-    featureGroup: drawnItems,
-  },
-});
-map.addControl(drawControl);
+// const drawControl = new L.Control.Draw({
+//   // position: "topright",
+//   draw: {
+//     polygon: {
+//       shapeOptions: {
+//         color: "#490066",
+//       },
+//       allowIntersection: false,
+//       drawError: {
+//         color: "orange",
+//         timeout: 2000,
+//       },
+//       showArea: true,
+//       metric: true,
+//       repeatMode: true,
+//     },
+//     polyline: {
+//       shapeOptions: {
+//         color: "#490066",
+//       },
+//       showArea: true,
+//       metric: true,
+//       repeatMode: true,
+//     },
+//     rectangle: false,
+//     circlemarker: false,
+//     marker: true,
+//     circle: false,
+//   },
+//   edit: {
+//     featureGroup: drawnItems,
+//   },
+// });
+// map.addControl(drawControl);
 
-map.on("draw:created", function (e) {
-  layer = e.layer;
-  drawnItems.addLayer(layer);
-});
+// map.on("draw:created", function (e) {
+//   layer = e.layer;
+//   drawnItems.addLayer(layer);
+// });
 
 let arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider({ countries: "CA" });
 const searchControl = L.esri.Geocoding.geosearch({
