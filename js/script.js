@@ -812,9 +812,9 @@ map.fitBounds(markersBR.getBounds());
 function getColorRAAV(feature) {
   switch (feature) {
     case 1:
-      return "blue";
+      return "#4933d5";
     case 0:
-      return "cyan";
+      return "#4c9b20";
   }
 }
 
