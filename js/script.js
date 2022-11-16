@@ -807,6 +807,42 @@ map.fitBounds(markersBR.getBounds());
 
 /* ***************************************************************************************************************************************************** */
 
+//   RAAV 15/11/2022
+const raavLayer = L.geoJson(raav, {
+  onEachFeature: function (feature, layer) {
+    layer.setStyle({ color: "blue" });
+    layer.bindPopup(`
+            <p style='margin:0; padding:0;'><strong>RAAV au 15-11-2022</strong></p>
+            `);
+    layer.on("mouseover", function () {
+      this.openPopup();
+    });
+    layer.on("mouseout", function () {
+      this.closePopup();
+    });
+  },
+});
+
+/* ***************************************************************************************************************************************************** */
+
+//   Camionnage 15/11/2022
+const camionnageLayer = L.geoJson(camionnage, {
+  onEachFeature: function (feature, layer) {
+    layer.setStyle({ color: "green" });
+    layer.bindPopup(`
+            <p style='margin:0; padding:0;'><strong>Camionnage</strong></p>
+            `);
+    layer.on("mouseover", function () {
+      this.openPopup();
+    });
+    layer.on("mouseout", function () {
+      this.closePopup();
+    });
+  },
+});
+
+/* ***************************************************************************************************************************************************** */
+
 // listen for the results event and add every result to the map
 const pegmanIcon = L.icon({
   iconUrl: "../img/google-street-view.png",
@@ -895,11 +931,14 @@ var overlaysTree = {
             selectAllCheckbox: true,
             children: [
                         { label: "Secteurs d'inspection", layer: inspectionLayer },
-                        { label: 'Arrondissements', layer: arrondissementsLayer },
-		        { label: 'Casernes pompiers', layer: casernesMarkers },
-		        { label: 'Bornes de recharge', layer: BRMarkers },
+                        { label: 'Réseau RAAV', layer: raavLayer },
+		    	{ label: 'Camionnage', layer: camionnageLayer },
+		    	{ label: 'Arrondissements', layer: arrondissementsLayer },
+		    	{ label: 'Casernes pompiers', layer: casernesMarkers },
+		   	{ label: 'Bornes de recharge', layer: BRMarkers },
 		    	{ label: 'Secteurs des Collectes', layer: collectesLayer },
 		        { label: 'Google Street View', layer: markerGSV }
+		    
                     ]
         }
     ]
