@@ -782,20 +782,20 @@ const geoJsonLayerBR = L.geoJson(BR, {
   onEachFeature: function (feature, layer) {
      layer.bindPopup(`
        <div>
-         <p><strong>Nom de la borne :</strong> ${feature.properties.Nom_Borne}</p>
-	 <p><strong>Nom_du_parc :</strong> ${feature.properties.Nom_du_parc}</p>
-	 <p><strong>Adresse :</strong> ${feature.properties.Adresse}</p>
-	 <p><strong>Rue :</strong> ${feature.properties.Rue}</p>
-	 <p><strong>Suite :</strong> ${feature.properties.Suite}</p>
-	 <p><strong>Ville :</strong> ${feature.properties.Ville}</p>
-	 <p><strong>Province :</strong> ${feature.properties.Province}</p>
-         <p><strong>Code Postal :</strong> ${feature.properties.CodePostal}</p>
-	 <p><strong>Région :</strong> ${feature.properties.Région}</p>
-	 <p><strong>Niveau de recharge :</strong> ${feature.properties.Niveau_recharge}</p>
-	 <p><strong>Coût :</strong> ${feature.properties.Coût} ($)</p>
-	 <p><strong>Mode de tarification :</strong> ${feature.properties.Mode_tarification}</p>
-	 <p><strong>Type d'emplacement :</strong> ${feature.properties.Type_Emplacement}</p>
-	 <p><strong>Puissance :</strong> ${feature.properties.Puissance} (kW)</p>
+         <p style='margin:0; padding:0; color:#4ef54a; background-color: black; padding:0 5px; border-radius:5px'><strong>Nom de la borne :</strong> ${feature.properties.Nom_Borne}</p>
+	 <p style='margin:0; padding:0;'><strong>Nom_du_parc :</strong> ${feature.properties.Nom_du_parc}</p>
+	 <p style='margin:0; padding:0;'><strong>Adresse :</strong> ${feature.properties.Adresse}</p>
+	 <p style='margin:0; padding:0;'><strong>Rue :</strong> ${feature.properties.Rue}</p>
+	 <p style='margin:0; padding:0;'><strong>Suite :</strong> ${feature.properties.Suite}</p>
+	 <p style='margin:0; padding:0;'><strong>Ville :</strong> ${feature.properties.Ville}</p>
+	 <p style='margin:0; padding:0;'><strong>Province :</strong> ${feature.properties.Province}</p>
+         <p style='margin:0; padding:0;'><strong>Code Postal :</strong> ${feature.properties.CodePostal}</p>
+	 <p style='margin:0; padding:0;'><strong>Région :</strong> ${feature.properties.Région}</p>
+	 <p style='margin:0; padding:0;'><strong>Niveau de recharge :</strong> ${feature.properties.Niveau_recharge}</p>
+	 <p style='margin:0; padding:0;'><strong>Coût :</strong> ${feature.properties.Coût} ($)</p>
+	 <p style='margin:0; padding:0;'><strong>Mode de tarification :</strong> ${feature.properties.Mode_tarification}</p>
+	 <p style='margin:0; padding:0;'><strong>Type d'emplacement :</strong> ${feature.properties.Type_Emplacement}</p>
+	 <p style='margin:0; padding:0;'><strong>Puissance :</strong> ${feature.properties.Puissance} (kW)</p>
        </div>
      `);
      layer.on("mouseover", function () {
