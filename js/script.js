@@ -822,9 +822,8 @@ function styleRAAV(feature) {
   return {
     color: getColorRAAV(feature.properties.TRC_TOP_RAAV),
     fillColor: getColorRAAV(feature.properties.TRC_TOP_RAAV),
-    weight: 3,
-    opacity: 1,
-    fillOpacity: 0.4,
+    weight: 5,
+    opacity: 1
   };
 }
 
@@ -840,18 +839,6 @@ const raavLayer = L.geoJson(RAAV, {
         <p style='margin:0; padding:0;'><strong>Type : </strong>Local</p>
       `);
     }
-    layer.on("mouseover", function () {
-      this.setStyle({
-        fillOpacity: 0.2,
-        opacity: 1,
-      });
-    });
-    layer.on("mouseout", function () {
-      this.setStyle({
-        fillOpacity: 0.4,
-        opacity: 1,
-      });
-    });
   },
 });
 
