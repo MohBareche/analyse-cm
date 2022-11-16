@@ -333,7 +333,7 @@ function getColorInspection(feature) {
 }
 function styleInspection(feature) {
   return {
-    color: getColorInspection(feature.properties.Secteur),
+    color: '#807f89',
     fillColor: getColorInspection(feature.properties.Secteur),
     opacity: 1,
     fillOpacity: 0.8,
