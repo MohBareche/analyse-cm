@@ -822,12 +822,21 @@ function getColorRAAV(feature) {
 }
 
 function styleRAAV(feature) {
-  return {
+ if(feature.properties.TRC_TOP_RAAV == 1){
+   return {
     color: getColorRAAV(feature.properties.TRC_TOP_RAAV),
     fillColor: getColorRAAV(feature.properties.TRC_TOP_RAAV),
     weight: 5,
     opacity: 1
   };
+ } else {
+    return {
+    color: getColorRAAV(feature.properties.TRC_TOP_RAAV),
+    fillColor: getColorRAAV(feature.properties.TRC_TOP_RAAV),
+    opacity: 1
+  };	 
+ }  
+  
 }
 
 const raavLayer = L.geoJson(RAAV, {
