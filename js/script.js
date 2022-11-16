@@ -822,6 +822,7 @@ function styleRAAV(feature) {
   return {
     color: getColorRAAV(feature.properties.TRC_TOP_RAAV),
     fillColor: getColorRAAV(feature.properties.TRC_TOP_RAAV),
+    weight: 2,
     opacity: 1,
     fillOpacity: 0.4,
   };
