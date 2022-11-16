@@ -827,7 +827,7 @@ function styleRAAV(feature) {
   };
 }
 
-const raavLayer = L.geoJson(RAAV, 
+const raavLayer = L.geoJson(RAAV, {
   style: styleRAAV,
   onEachFeature: function (feature, layer) {
     if (feature.properties.ATI_GEOMATIQUE.TRC_TOP_RAAV.ARTERE == 1) {
