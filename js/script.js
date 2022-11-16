@@ -798,15 +798,13 @@ const geoJsonLayerBR = L.geoJson(BR, {
 	 <p><strong>Puissance :</strong> ${feature.properties.Puissance} (kW)</p>
        </div>
 	`);
-     })
-	
      layer.on("mouseover", function () {
        this.openPopup();
      });
      layer.on("mouseout", function () {
        this.closePopup();
      });
-  },
+  }),
 });
 const BRMarkers = markersBR.addLayer(geoJsonLayerBR);
 map.fitBounds(markersBR.getBounds());
