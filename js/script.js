@@ -808,7 +808,7 @@ map.fitBounds(markersBR.getBounds());
 /* ***************************************************************************************************************************************************** */
 
 //   RAAV 15/11/2022
-const raavLayer = L.geoJson(raav, {
+const raavLayer = L.geoJson(RAAV, {
   onEachFeature: function (feature, layer) {
     layer.setStyle({ color: "blue" });
     layer.bindPopup(`
