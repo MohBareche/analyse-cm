@@ -820,8 +820,8 @@ function getColorRAAV(feature) {
 
 function styleRAAV(feature) {
   return {
-    color: getColorRAAV(feature.properties.ATI_GEOMATIQUE.TRC_TOP_RAAV.ARTERE),
-    fillColor: getColorRAAV(feature.properties.ATI_GEOMATIQUE.TRC_TOP_RAAV.ARTERE),
+    color: getColorRAAV(feature.properties.TRC_TOP_RAAV),
+    fillColor: getColorRAAV(feature.properties.TRC_TOP_RAAV),
     opacity: 1,
     fillOpacity: 0.4,
   };
@@ -830,7 +830,7 @@ function styleRAAV(feature) {
 const raavLayer = L.geoJson(RAAV, {
   style: styleRAAV,
   onEachFeature: function (feature, layer) {
-    if (feature.properties.ATI_GEOMATIQUE.TRC_TOP_RAAV.ARTERE == 1) {
+    if (feature.properties.TRC_TOP_RAAV == 1) {
       layer.bindPopup(`
             <p style='margin:0; padding:0;'><strong>Type : </strong>RAAV</p>
             `);
