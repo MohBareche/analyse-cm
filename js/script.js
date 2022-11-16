@@ -776,30 +776,35 @@ map.fitBounds(markersCasernes.getBounds());
 
 /* ***************************************************************************************************************************************************** */
 //    Bornes de recharges
-// BR_15_11_2022
+//    BR_15_11_2022
 const markersBR = L.markerClusterGroup();
-const geoJsonLayerBR = L.geoJson(BR_15_11_2022, {
+const geoJsonLayerBR = L.geoJson(BR, {
   onEachFeature: function (feature, layer) {
-//     if (feature.properties.ARRONDISSEMENT !== null) {
-//       layer.bindPopup(`
-//             <div>
-//               <p style='margin:0; padding:0'><strong>Caserne :</strong> ${feature.properties.CASERNE}</p>
-//               <p style='margin:0; padding:0'><strong>Arrond.:</strong> ${feature.properties.ARRONDISSEMENT}</p>
-//             </div>
-//             `);
-//     } else {
-//       layer.bindPopup(`
-//       <div>
-//         <p><strong>Caserne :</strong> ${feature.properties.CASERNE}</p>
-//         <p><strong>Ville: </strong> ${feature.properties.VILLE}</p>
-//       </div>`);
-//     }
-//     layer.on("mouseover", function () {
-//       this.openPopup();
-//     });
-//     layer.on("mouseout", function () {
-//       this.closePopup();
-//     });
+     layer.bindPopup(`
+       <div>
+         <p><strong>Nom de la borne :</strong> ${feature.properties.Nom_Borne}</p>
+	 <p><strong>Nom_du_parc :</strong> ${feature.properties.Nom_du_parc}</p>
+	 <p><strong>Adresse :</strong> ${feature.properties.Adresse}</p>
+	 <p><strong>Rue :</strong> ${feature.properties.Rue}</p>
+	 <p><strong>Suite :</strong> ${feature.properties.Suite}</p>
+	 <p><strong>Ville :</strong> ${feature.properties.Ville}</p>
+	 <p><strong>Province :</strong> ${feature.properties.Province}</p>
+         <p><strong>Code Postal :</strong> ${feature.properties.CodePostal}</p>
+	 <p><strong>Région :</strong> ${feature.properties.Région}</p>
+	 <p><strong>Niveau de recharge :</strong> ${feature.properties.Niveau_recharge}</p>
+	 <p><strong>Coût :</strong> ${feature.properties.Coût} ($)</p>
+	 <p><strong>Mode de tarification :</strong> ${feature.properties.Mode_tarification}</p>
+	 <p><strong>Type d'emplacement :</strong> ${feature.properties.Type_Emplacement}</p>
+	 <p><strong>Puissance :</strong> ${feature.properties.Puissance} (kW)</p>
+       </div>
+	`);
+     }
+     layer.on("mouseover", function () {
+       this.openPopup();
+     });
+     layer.on("mouseout", function () {
+       this.closePopup();
+     });
   },
 });
 const BRMarkers = markersBR.addLayer(geoJsonLayerBR);
