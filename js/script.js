@@ -936,8 +936,8 @@ const baseTree = {
     ]
 };
 
-const layers2023 = L.featureGroup(C1108_Layer, C1106_Layer).addTo(map);
-L.getBounds(layers2023)
+const layers2023 = L.featureGroup([C1108_Layer, C1106_Layer]).addTo(map);
+map.fitBounds(layers2023.getBounds());
 
 var overlaysTree = {
     label: 'Couches de travail',
