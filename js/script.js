@@ -255,7 +255,7 @@ const C1108_Layer = L.geoJson(C1108, {
       this.openPopup();
     });
   },
-});
+}).addTo(map);
 
 /* ***************************************************************************************************************************************************** */
 //   C1106
@@ -310,7 +310,7 @@ const C1106_Layer = L.geoJson(C1106, {
       this.openPopup();
     })
   }
-});
+}).addTo(map);
 
 /* ***************************************************************************************************************************************************** */
 
@@ -952,10 +952,18 @@ var overlaysTree = {
                         { label: 'Contrat 1096', layer: C1096_Layer },
 			{ label: 'Contrat 1104', layer: C1104_Layer },
 			{ label: 'Contrat 1105', layer: C1105_Layer },
-			{ label: 'Contrat 1106', layer: C1106_Layer },
-			{ label: 'Contrat 1108', layer: C1108_Layer }
+// 			{ label: 'Contrat 1106', layer: C1106_Layer },
+// 			{ label: 'Contrat 1108', layer: C1108_Layer }
                     ]
-                }
+                },
+		{
+                   label: '2023',
+                   selectAllCheckbox: true,
+                   children: [
+                        { label: 'Projets COPRO', layer: C1108_Layer },
+                        { label: 'Projets Arrondissement', layer: C1106_Layer }
+                   ]
+               }
             ]
         }, {
             label: 'Autres',
