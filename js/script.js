@@ -990,10 +990,10 @@ const lay = L.control.layers.tree(baseTree, overlaysTree, {
                 openedSymbol: '&#8863; &#x1f5c1;',
                 collapseAll: 'Réduire tout',
                 expandAll: 'Développer tout',
-		collapsed: true
+		collapsed: false
             });
 
-lay.addTo(map).collapseTree(true).expandSelected().collapseTree(true);
+lay.addTo(map).collapseTree(true).expandSelected(true);
 L.control.locate(
 {
     flyTo:true,
