@@ -990,7 +990,7 @@ const lay = L.control.layers.tree(baseTree, overlaysTree, {
                 openedSymbol: '&#8863; &#x1f5c1;',
                 collapseAll: 'Réduire tout',
                 expandAll: 'Développer tout',
-		collapsed: false
+		collapsed: true
             });
 
 lay.addTo(map).collapseTree(true).expandSelected().collapseTree(true);
