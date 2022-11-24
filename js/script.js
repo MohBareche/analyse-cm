@@ -936,6 +936,9 @@ const baseTree = {
     ]
 };
 
+const layers2023 = L.featureGroup(C1108_Layer, C1109_Layer).addTo(map);
+L.getBounds(layers2023)
+
 var overlaysTree = {
     label: 'Couches de travail',
     selectAllCheckbox: 'Un/select all',
