@@ -1087,24 +1087,6 @@ const legend = L.control.Legend({
             opacity: 1,
             column: 2,
             legends: [{
-                label: "BRV",
-                type: "image",
-                url: "marker/marker-red.png",
-            }, {
-                label: "Marker2",
-                type: "image",
-                url: "marker/purple.png"
-            }, {
-                label: "Circle",
-                type: "circle",
-                radius: 6,
-                color: "blue",
-                fillColor: "#FF0000",
-                fillOpacity: 0.6,
-                weight: 2,
-                layers: [marker],
-                inactive: true,
-            }, {
                 label: "Dos d'âne",
                 type: "polyline",
                 color: "blue",
