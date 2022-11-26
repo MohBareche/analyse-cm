@@ -50,7 +50,7 @@
 
 .leaflet-legend-item i {
   display: inline-block;
-  padding: 0px 5px 0px 5px;
+  padding: 0px 3px 0px 4px;
   position: relative;
   vertical-align: middle;
 }
@@ -69,7 +69,7 @@
 
 .leaflet-legend-expanded .leaflet-legend-contents {
   display: block;
-  padding: 6px 15px 6px 6px;
+  padding: 6px 15px 6px 10px;
 }
 
 .leaflet-legend-contents img {
