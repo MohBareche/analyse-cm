@@ -1088,7 +1088,8 @@ const legend = L.control.Legend({
             column: 2,
             legends: [{
                 label: "Dos d'âne",
-                type: dosDaneIcon1106,
+                type: "image",
+		url: "../img/speed_bump_1106.svg",
                 layers: C1106_Layer
             }, {
                 label: "Rehab EG",
