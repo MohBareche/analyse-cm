@@ -1078,3 +1078,73 @@ searchControl.on("results", function (data) {
 
 // Échelle à droite en bas
 L.control.scale({ position: "bottomright" }).addTo(map);
+
+const legend = L.control.Legend({
+            position: "bottomleft",
+            title:"Légende",
+            collapsed: false,
+            symbolWidth: 24,
+            opacity: 1,
+            column: 2,
+            legends: [{
+                label: "BRV",
+                type: "image",
+                url: "marker/marker-red.png",
+            }, {
+                label: "Marker2",
+                type: "image",
+                url: "marker/purple.png"
+            }, {
+                label: "Circle",
+                type: "circle",
+                radius: 6,
+                color: "blue",
+                fillColor: "#FF0000",
+                fillOpacity: 0.6,
+                weight: 2,
+                layers: [marker],
+                inactive: true,
+            }, {
+                label: "Dos d'âne",
+                type: "polyline",
+                color: "blue",
+                fillColor: "blue",
+                weight: 2,
+                layers: C1106_Layer
+            }, {
+                label: "Rehab EG",
+                type: "polyline",
+                color: "green",
+                fillColor: "green",
+                dashArray: [5, 5],
+                weight: 2
+            }, {
+                label: "Rectangle",
+                type: "rectangle",
+                color: "#FF0000",
+                fillColor: "#FF0000",
+                weight: 2
+            }, {
+                label: "Square",
+                type: "polygon",
+                sides: 4,
+                color: "#FF0000",
+                fillColor: "#FF0000",
+                weight: 2
+            }, {
+                label: "Regular triangle",
+                type: "polygon",
+                sides: 3,
+                color: "#FF0000",
+                fillColor: "#FF0000",
+                weight: 2
+            }, {
+                label: "Regular polygon",
+                type: "polygon",
+                sides: 5,
+                color: "red",
+                fillColor: "red",
+                weight: 2
+            }]
+        })
+        .addTo(map);
