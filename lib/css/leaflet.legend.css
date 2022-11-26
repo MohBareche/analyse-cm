@@ -15,7 +15,7 @@
 
 .leaflet-legend-item {
   display: table;
-  margin: 2px 2px;
+  margin: 2px 0;
 }
 
 .leaflet-legend-item span {
@@ -50,7 +50,7 @@
 
 .leaflet-legend-item i {
   display: inline-block;
-  padding: 0px 3px 0px 4px;
+  padding: 0px 5px 0px 5px;
   position: relative;
   vertical-align: middle;
 }
