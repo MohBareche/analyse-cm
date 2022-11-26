@@ -1088,14 +1088,11 @@ const legend = L.control.Legend({
             column: 2,
             legends: [{
                 label: "Dos d'âne",
-                type: "polyline",
-                color: "blue",
-                fillColor: "blue",
-                weight: 2,
+                type: dosDaneIcon1106,
                 layers: C1106_Layer
             }, {
                 label: "Rehab EG",
-                type: "polyline",
+                type: "",
                 color: "green",
                 fillColor: "green",
                 dashArray: [5, 5],
