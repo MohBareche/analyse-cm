@@ -1094,6 +1094,7 @@ const legend = L.control.Legend({
             }, {
                 label: "Article 85",
                 type: "polyline",
+		layers: C1108_Layer,
                 color: "#3388ff",
                 fillColor: "#3388ff",
                 weight: 2
