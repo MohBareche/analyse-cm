@@ -1089,41 +1089,13 @@ const legend = L.control.Legend({
             legends: [{
                 label: "Dos d'âne",
                 type: "image",
-		url: "../img/speed_bump_1106.svg",
+		url: "../img/speed_bump_1106_OK.svg",
                 layers: C1106_Layer
             }, {
-                label: "Rehab EG",
-                type: "",
-                color: "green",
-                fillColor: "green",
-                dashArray: [5, 5],
-                weight: 2
-            }, {
-                label: "Rectangle",
-                type: "rectangle",
-                color: "#FF0000",
-                fillColor: "#FF0000",
-                weight: 2
-            }, {
-                label: "Square",
-                type: "polygon",
-                sides: 4,
-                color: "#FF0000",
-                fillColor: "#FF0000",
-                weight: 2
-            }, {
-                label: "Regular triangle",
-                type: "polygon",
-                sides: 3,
-                color: "#FF0000",
-                fillColor: "#FF0000",
-                weight: 2
-            }, {
-                label: "Regular polygon",
-                type: "polygon",
-                sides: 5,
-                color: "red",
-                fillColor: "red",
+                label: "Article 85",
+                type: "polyline",
+                color: "#3388ff",
+                fillColor: "#3388ff",
                 weight: 2
             }]
         })
